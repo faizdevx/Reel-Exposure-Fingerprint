@@ -1,0 +1,912 @@
+{
+ "startedAt": "2026-10-06T19:02:36.694105+00:00",
+ "threads": 4,
+ "machine": {
+  "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "logicalCpus": 12,
+  "ramGB": 15.7,
+  "python": "3.12.11",
+  "torch": "2.14.1+cpu",
+  "transformers": "5.19.0"
+ },
+ "framesDir": "D:\\insta_recom_exten\\reel-exposure-fingerprint\\spikes\\data\\synthetic_frames",
+ "nFrames": 30,
+ "siglip": [
+  {
+   "model": "google/siglip2-base-patch16-224",
+   "downloadOrCacheMs": 133518.5,
+   "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+   "loadMs": 24855.7,
+   "dim": 768,
+   "latencyPerImageBatch1Ms": {
+    "n": 30,
+    "p50": 216.6,
+    "p95": 269.1,
+    "max": 290.5
+   },
+   "latency5FramesBatchMs": {
+    "n": 5,
+    "p50": 806.8,
+    "p95": 833.0,
+    "max": 833.0
+   },
+   "determinism": {
+    "repeatMaxAbsDiff": 0.0
+   },
+   "sanityZeroShotPhotos": {
+    "n": 16,
+    "top1": 0.688,
+    "top3": 0.938
+   },
+   "predictions": [
+    {
+     "file": "photo_0285_en.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "pets_animals",
+      "comedy_memes",
+      "fitness_workout"
+     ]
+    },
+    {
+     "file": "photo_0285_hi.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "pets_animals",
+      "comedy_memes",
+      "education_exams"
+     ]
+    },
+    {
+     "file": "photo_0785_en.jpg",
+     "want": [
+      "travel",
+      "cricket_sports"
+     ],
+     "got": [
+      "comedy_memes",
+      "fitness_workout",
+      "travel"
+     ]
+    },
+    {
+     "file": "photo_0785_hi.jpg",
+     "want": [
+      "travel",
+      "cricket_sports"
+     ],
+     "got": [
+      "comedy_memes",
+      "cricket_sports",
+      "education_exams"
+     ]
+    },
+    {
+     "file": "photo_0872_en.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "comedy_memes",
+      "fitness_workout"
+     ]
+    },
+    {
+     "file": "photo_0872_hi.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "comedy_memes",
+      "education_exams"
+     ]
+    },
+    {
+     "file": "photo_0885_en.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "fitness_workout",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_0885_hi.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "fitness_workout",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_1000_en.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "comedy_memes",
+      "fitness_workout"
+     ]
+    },
+    {
+     "file": "photo_1000_hi.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "comedy_memes",
+      "education_exams"
+     ]
+    },
+    {
+     "file": "photo_1268_en.jpg",
+     "want": [
+      "travel"
+     ],
+     "got": [
+      "travel",
+      "comedy_memes",
+      "tech_coding"
+     ]
+    },
+    {
+     "file": "photo_1268_hi.jpg",
+     "want": [
+      "travel"
+     ],
+     "got": [
+      "travel",
+      "education_exams",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_1296_en.jpg",
+     "want": [
+      "tech_coding"
+     ],
+     "got": [
+      "comedy_memes",
+      "fashion_beauty",
+      "finance_money"
+     ]
+    },
+    {
+     "file": "photo_1296_hi.jpg",
+     "want": [
+      "tech_coding"
+     ],
+     "got": [
+      "comedy_memes",
+      "music_dance",
+      "tech_coding"
+     ]
+    },
+    {
+     "file": "photo_9769_en.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "pets_animals",
+      "comedy_memes",
+      "travel"
+     ]
+    },
+    {
+     "file": "photo_9769_hi.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "comedy_memes",
+      "pets_animals",
+      "education_exams"
+     ]
+    }
+   ]
+  },
+  {
+   "model": "google/siglip-base-patch16-256-multilingual",
+   "downloadOrCacheMs": 128524.1,
+   "revision": "8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6",
+   "loadMs": 27866.7,
+   "dim": 768,
+   "latencyPerImageBatch1Ms": {
+    "n": 30,
+    "p50": 318.9,
+    "p95": 362.4,
+    "max": 394.9
+   },
+   "latency5FramesBatchMs": {
+    "n": 5,
+    "p50": 1199.4,
+    "p95": 1330.6,
+    "max": 1330.6
+   },
+   "determinism": {
+    "repeatMaxAbsDiff": 0.0
+   },
+   "sanityZeroShotPhotos": {
+    "n": 16,
+    "top1": 0.875,
+    "top3": 0.875
+   },
+   "predictions": [
+    {
+     "file": "photo_0285_en.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "pets_animals",
+      "comedy_memes",
+      "fitness_workout"
+     ]
+    },
+    {
+     "file": "photo_0285_hi.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "pets_animals",
+      "comedy_memes",
+      "travel"
+     ]
+    },
+    {
+     "file": "photo_0785_en.jpg",
+     "want": [
+      "travel",
+      "cricket_sports"
+     ],
+     "got": [
+      "travel",
+      "fitness_workout",
+      "fashion_beauty"
+     ]
+    },
+    {
+     "file": "photo_0785_hi.jpg",
+     "want": [
+      "travel",
+      "cricket_sports"
+     ],
+     "got": [
+      "travel",
+      "fitness_workout",
+      "cricket_sports"
+     ]
+    },
+    {
+     "file": "photo_0872_en.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "comedy_memes",
+      "fitness_workout"
+     ]
+    },
+    {
+     "file": "photo_0872_hi.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "comedy_memes",
+      "education_exams"
+     ]
+    },
+    {
+     "file": "photo_0885_en.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "fitness_workout",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_0885_hi.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "fitness_workout",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_1000_en.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "fitness_workout",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_1000_hi.jpg",
+     "want": [
+      "cricket_sports"
+     ],
+     "got": [
+      "cricket_sports",
+      "fitness_workout",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_1268_en.jpg",
+     "want": [
+      "travel"
+     ],
+     "got": [
+      "travel",
+      "comedy_memes",
+      "pets_animals"
+     ]
+    },
+    {
+     "file": "photo_1268_hi.jpg",
+     "want": [
+      "travel"
+     ],
+     "got": [
+      "travel",
+      "devotional",
+      "comedy_memes"
+     ]
+    },
+    {
+     "file": "photo_1296_en.jpg",
+     "want": [
+      "tech_coding"
+     ],
+     "got": [
+      "fashion_beauty",
+      "comedy_memes",
+      "music_dance"
+     ]
+    },
+    {
+     "file": "photo_1296_hi.jpg",
+     "want": [
+      "tech_coding"
+     ],
+     "got": [
+      "comedy_memes",
+      "fashion_beauty",
+      "music_dance"
+     ]
+    },
+    {
+     "file": "photo_9769_en.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "pets_animals",
+      "comedy_memes",
+      "travel"
+     ]
+    },
+    {
+     "file": "photo_9769_hi.jpg",
+     "want": [
+      "pets_animals"
+     ],
+     "got": [
+      "pets_animals",
+      "comedy_memes",
+      "fashion_beauty"
+     ]
+    }
+   ]
+  }
+ ],
+ "rssAfterSiglipMB": 85,
+ "ocr": [
+  {
+   "config": "default (det+rec PP-OCRv6 small, ch/en)",
+   "loadMs": 2288.4,
+   "latencyPerFrameMs": {
+    "n": 30,
+    "p50": 429.8,
+    "p95": 596.8,
+    "max": 629.7
+   },
+   "cerByLang": {
+    "en": {
+     "n": 14,
+     "median": 0.0,
+     "recovered(cer<=0.1)": 14
+    },
+    "hi": {
+     "n": 14,
+     "median": 1.0,
+     "recovered(cer<=0.1)": 0
+    },
+    "mixed": {
+     "n": 2,
+     "median": 0.516,
+     "recovered(cer<=0.1)": 0
+    }
+   },
+   "rows": [
+    {
+     "file": "photo_0139_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.985,
+     "ocr": "Wait for the end"
+    },
+    {
+     "file": "photo_0139_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "photo_0285_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "Day 1 vs Day 30"
+    },
+    {
+     "file": "photo_0285_hi.jpg",
+     "lang": "hi",
+     "cer": 0.958,
+     "meanScore": 0.723,
+     "ocr": "上 上"
+    },
+    {
+     "file": "photo_0632_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 1.0,
+     "ocr": "Rate this 1-10"
+    },
+    {
+     "file": "photo_0632_hi.jpg",
+     "lang": "hi",
+     "cer": 0.864,
+     "meanScore": 0.666,
+     "ocr": "1A10"
+    },
+    {
+     "file": "photo_0724_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 1.0,
+     "ocr": "Best place to visit STOP"
+    },
+    {
+     "file": "photo_0724_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": 1.0,
+     "ocr": "STOP"
+    },
+    {
+     "file": "photo_0776_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.984,
+     "ocr": "Don't skip this"
+    },
+    {
+     "file": "photo_0776_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "photo_0785_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 1.0,
+     "ocr": "My morning routine"
+    },
+    {
+     "file": "photo_0785_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "photo_0872_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 1.0,
+     "ocr": "Try this trick"
+    },
+    {
+     "file": "photo_0872_hi.jpg",
+     "lang": "hi",
+     "cer": 0.938,
+     "meanScore": 0.537,
+     "ocr": "TRT TG"
+    },
+    {
+     "file": "photo_0885_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "Part 2 in comments Morgan"
+    },
+    {
+     "file": "photo_0885_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": 0.999,
+     "ocr": "Morgan"
+    },
+    {
+     "file": "photo_1000_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "Nobody talks about this"
+    },
+    {
+     "file": "photo_1000_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "photo_1268_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.999,
+     "ocr": "Watch till end"
+    },
+    {
+     "file": "photo_1268_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "photo_1296_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.979,
+     "ocr": "Save for later HELLO KITTY"
+    },
+    {
+     "file": "photo_1296_hi.jpg",
+     "lang": "hi",
+     "cer": 0.947,
+     "meanScore": 0.969,
+     "ocr": "HELLO KITTY"
+    },
+    {
+     "file": "photo_9769_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 1.0,
+     "ocr": "Weekend vibes"
+    },
+    {
+     "file": "photo_9769_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "card_0_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 1.0,
+     "ocr": "5 habits that changed my life"
+    },
+    {
+     "file": "card_1_hi.jpg",
+     "lang": "hi",
+     "cer": 0.867,
+     "meanScore": 0.774,
+     "ocr": "Hh5 AH"
+    },
+    {
+     "file": "card_2_mixed.jpg",
+     "lang": "mixed",
+     "cer": 0.553,
+     "meanScore": 0.805,
+     "ocr": "Paisa bachane ke 3 ta"
+    },
+    {
+     "file": "card_3_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "Python tip: use enumerate()"
+    },
+    {
+     "file": "card_4_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": 0.63,
+     "ocr": "P"
+    },
+    {
+     "file": "card_5_mixed.jpg",
+     "lang": "mixed",
+     "cer": 0.48,
+     "meanScore": 0.91,
+     "ocr": "Exam tips / &π f"
+    }
+   ]
+  },
+  {
+   "config": "devanagari rec (PP-OCRv5 mobile)",
+   "loadMs": 10023.1,
+   "latencyPerFrameMs": {
+    "n": 30,
+    "p50": 472.0,
+    "p95": 558.2,
+    "max": 689.7
+   },
+   "cerByLang": {
+    "en": {
+     "n": 14,
+     "median": 0.0,
+     "recovered(cer<=0.1)": 14
+    },
+    "hi": {
+     "n": 14,
+     "median": 0.545,
+     "recovered(cer<=0.1)": 5
+    },
+    "mixed": {
+     "n": 2,
+     "median": 0.308,
+     "recovered(cer<=0.1)": 1
+    }
+   },
+   "rows": [
+    {
+     "file": "photo_0139_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.999,
+     "ocr": "Wait for the end"
+    },
+    {
+     "file": "photo_0139_hi.jpg",
+     "lang": "hi",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "अंत तक देखें"
+    },
+    {
+     "file": "photo_0285_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.97,
+     "ocr": "Day 1 vs Day 30"
+    },
+    {
+     "file": "photo_0285_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": 0.596,
+     "ocr": "D3h"
+    },
+    {
+     "file": "photo_0632_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "Rate this 1-10"
+    },
+    {
+     "file": "photo_0632_hi.jpg",
+     "lang": "hi",
+     "cer": 0.091,
+     "meanScore": 0.919,
+     "ocr": "इसे १ से 1० रेटिंग दें"
+    },
+    {
+     "file": "photo_0724_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "Best place to visit STOP"
+    },
+    {
+     "file": "photo_0724_hi.jpg",
+     "lang": "hi",
+     "cer": 0.13,
+     "meanScore": 0.977,
+     "ocr": "घूमने की सबसे अच्छी STOP)"
+    },
+    {
+     "file": "photo_0776_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.999,
+     "ocr": "Don't skip this"
+    },
+    {
+     "file": "photo_0776_hi.jpg",
+     "lang": "hi",
+     "cer": 0.0,
+     "meanScore": 0.944,
+     "ocr": "इसे स्किप मत करना"
+    },
+    {
+     "file": "photo_0785_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.979,
+     "ocr": "My morning routine"
+    },
+    {
+     "file": "photo_0785_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "photo_0872_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.975,
+     "ocr": "Try this trick"
+    },
+    {
+     "file": "photo_0872_hi.jpg",
+     "lang": "hi",
+     "cer": 0.0,
+     "meanScore": 0.972,
+     "ocr": "यह तरीका आज़माएं"
+    },
+    {
+     "file": "photo_0885_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.882,
+     "ocr": "Part 2 in comments vorosn"
+    },
+    {
+     "file": "photo_0885_hi.jpg",
+     "lang": "hi",
+     "cer": 0.8,
+     "meanScore": 0.796,
+     "ocr": "दशक ट lt Moroan"
+    },
+    {
+     "file": "photo_1000_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "Nobody talks about this"
+    },
+    {
+     "file": "photo_1000_hi.jpg",
+     "lang": "hi",
+     "cer": 0.29,
+     "meanScore": 0.93,
+     "ocr": "इसके बारे में कोई करता"
+    },
+    {
+     "file": "photo_1268_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.936,
+     "ocr": "Watch till end"
+    },
+    {
+     "file": "photo_1268_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "photo_1296_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.987,
+     "ocr": "Save for later HELLO KITTY"
+    },
+    {
+     "file": "photo_1296_hi.jpg",
+     "lang": "hi",
+     "cer": 0.947,
+     "meanScore": 0.994,
+     "ocr": "HELLO KITTY"
+    },
+    {
+     "file": "photo_9769_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.994,
+     "ocr": "Weekend vibes"
+    },
+    {
+     "file": "photo_9769_hi.jpg",
+     "lang": "hi",
+     "cer": 1.0,
+     "meanScore": null,
+     "ocr": ""
+    },
+    {
+     "file": "card_0_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.998,
+     "ocr": "5 habits that changed my life"
+    },
+    {
+     "file": "card_1_hi.jpg",
+     "lang": "hi",
+     "cer": 0.0,
+     "meanScore": 0.958,
+     "ocr": "सफलता के 5 नियम"
+    },
+    {
+     "file": "card_2_mixed.jpg",
+     "lang": "mixed",
+     "cer": 0.617,
+     "meanScore": 0.98,
+     "ocr": "Paisa bachane ke 3"
+    },
+    {
+     "file": "card_3_en.jpg",
+     "lang": "en",
+     "cer": 0.0,
+     "meanScore": 0.999,
+     "ocr": "Python tip: use enumerate()"
+    },
+    {
+     "file": "card_4_hi.jpg",
+     "lang": "hi",
+     "cer": 0.878,
+     "meanScore": 0.974,
+     "ocr": "मेहनत"
+    },
+    {
+     "file": "card_5_mixed.jpg",
+     "lang": "mixed",
+     "cer": 0.0,
+     "meanScore": 0.98,
+     "ocr": "Exam tips / परीक्षा टिप्स"
+    }
+   ]
+  }
+ ],
+ "rssAfterOcrMB": 295
+}

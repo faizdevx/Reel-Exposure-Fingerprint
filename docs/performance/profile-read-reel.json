@@ -1,0 +1,81 @@
+{
+ "rounds": 600,
+ "mean_ms": 1.264500000178814,
+ "top": [
+  {
+   "key": "pathOf :74",
+   "ms_per_call": 0.7513783333333334,
+   "share": 0.37174464618345504
+  },
+  {
+   "key": "(program) :0",
+   "ms_per_call": 0.7487783333333333,
+   "share": 0.3704582954368356
+  },
+  {
+   "key": "matchPaths :114",
+   "ms_per_call": 0.12506,
+   "share": 0.061873470912393744
+  },
+  {
+   "key": "querySelectorAll :0",
+   "ms_per_call": 0.10859666666666666,
+   "share": 0.053728232018094665
+  },
+  {
+   "key": "hasMoreControl :188",
+   "ms_per_call": 0.09520999999999999,
+   "share": 0.047105174840628566
+  },
+  {
+   "key": "(garbage collector) :0",
+   "ms_per_call": 0.04443,
+   "share": 0.021981755258577113
+  },
+  {
+   "key": "getAttribute :0",
+   "ms_per_call": 0.033235,
+   "share": 0.016443025793806222
+  },
+  {
+   "key": "climb :85",
+   "ms_per_call": 0.017768333333333334,
+   "share": 0.008790888019044587
+  },
+  {
+   "key": "decodeSafe :123",
+   "ms_per_call": 0.01665166666666667,
+   "share": 0.008238416865047789
+  },
+  {
+   "key": "clean :73",
+   "ms_per_call": 0.009994999999999999,
+   "share": 0.004945029120177319
+  },
+  {
+   "key": "readHandle :151",
+   "ms_per_call": 0.009203333333333332,
+   "share": 0.004553351809507946
+  },
+  {
+   "key": "getElementsByTagName :0",
+   "ms_per_call": 0.008453333333333334,
+   "share": 0.004182289094136962
+  },
+  {
+   "key": "readShortcodeFromLinks :130",
+   "ms_per_call": 0.007346666666666666,
+   "share": 0.003634765443011776
+  },
+  {
+   "key": "querySelector :0",
+   "ms_per_call": 0.006613333333333333,
+   "share": 0.003271948565760147
+  },
+  {
+   "key": "readCaption :162",
+   "ms_per_call": 0.006548333333333333,
+   "share": 0.0032397897970946614
+  }
+ ]
+}

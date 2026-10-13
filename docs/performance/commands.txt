@@ -1,0 +1,39 @@
+The commands that produced the result files in this folder, in the order they were run on 2026-10-10.
+Run from the repository root. <hf> is the Hugging Face cache that holds multilingual-e5-small and both
+SigLIP models; <db> is postgresql+psycopg://postgres:t@127.0.0.1:55432/ref_bench (a throw-away database
+named *_bench: the benchmark wipes it).
+
+# models.json
+cd server && python -m app.bench models --out ../docs/performance/models.json --model-cache <hf> --n 100 --frames-n 40
+
+# pipeline-siglip2-5frames.json, pipeline-multilingual-5frames.json (the N3 runs, 4 CPUs, 4 threads)
+python -m app.bench pipeline --out ../docs/performance/pipeline-siglip2-5frames.json --database-url <db> --model-cache <hf> --reels 200 --visual siglip2-base --frames-per-reel 5
+python -m app.bench pipeline --out ../docs/performance/pipeline-multilingual-5frames.json --database-url <db> --model-cache <hf> --reels 200 --visual siglip-multilingual --frames-per-reel 5
+
+# api.json (100,000 exposures over 5 users, N4 and event upload)
+python -m app.bench api --out ../docs/performance/api.json --database-url <db>
+
+# browser-baseline.json and browser.json (before and after the change to `climb` in ig-adapter.ts), and the profiles
+cd ../extension
+node bench/browser-bench.mjs --out ../docs/performance/browser-baseline.json      # code with `querySelectorAll(SEL.video).length > 1`
+node bench/profile-read-reel.mjs --rounds 600 --out ../docs/performance/profile-read-reel-baseline.json
+node bench/browser-bench.mjs --out ../docs/performance/browser.json               # code with `getElementsByTagName(SEL.video)[1] !== undefined`
+node bench/profile-read-reel.mjs --rounds 600 --out ../docs/performance/profile-read-reel.json
+
+# contention.json (does OCR slow the text model?)
+cd ../server && python -m app.bench contention --out ../docs/performance/contention.json --model-cache <hf> --n 30
+
+# pipeline-siglip2-5frames-ort-no-spin.json (ONNX Runtime told not to spin: the change measured in the report)
+python -m app.bench pipeline --out ../docs/performance/pipeline-siglip2-5frames-ort-no-spin.json --database-url <db> --model-cache <hf> --reels 200 --visual siglip2-base --frames-per-reel 5 --ort-no-spin
+
+# sensitivity runs on 2 CPUs and 2 threads, 60 Reels each
+python -m app.bench pipeline --out ../docs/performance/pipeline-2cpu-baseline.json --database-url <db> --model-cache <hf> --reels 60 --cpus 2 --threads 2 --visual siglip2-base --frames-per-reel 5
+python -m app.bench pipeline --out ../docs/performance/pipeline-2cpu-ort-no-spin.json --database-url <db> --model-cache <hf> --reels 60 --cpus 2 --threads 2 --visual siglip2-base --frames-per-reel 5 --ort-no-spin
+python -m app.bench pipeline --out ../docs/performance/pipeline-2cpu-ort-no-spin-ocr-1-frame.json --database-url <db> --model-cache <hf> --reels 60 --cpus 2 --threads 2 --visual siglip2-base --frames-per-reel 5 --ort-no-spin --ocr-frames 1
+# two workers with one thread each (--workers 2): failed twice with "bad allocation" (out of memory) on the host and has no result file
+
+# api-one-user-100k.json (the worst case of N11: one user holds all 100,000 exposures)
+python -m app.bench api --out ../docs/performance/api-one-user-100k.json --database-url <db> --users 1 --reels-per-user 100000 --clients 3 --requests 150 --reps 10
+
+# the report
+python -m app.bench report

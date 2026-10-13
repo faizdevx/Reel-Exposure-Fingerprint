@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "REF M0 probe (throwaway)",
+  "version": "0.1.0",
+  "description": "M0 feasibility probe for Reel Exposure Fingerprint. Local only. Observes rendered DOM and video pixels on instagram.com Reels while recording is on. Never reads cookies, credentials or network responses.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "background": { "service_worker": "sw.js" },
+  "action": { "default_popup": "popup.html", "default_title": "REF M0 probe" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

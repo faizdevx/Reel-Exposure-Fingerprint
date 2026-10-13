@@ -1,0 +1,146 @@
+{
+ "startedAt": "2026-10-08T16:20:32.313808+00:00",
+ "frameSource": "synthetic",
+ "nFrames": 30,
+ "nLabelled": 16,
+ "countsAsEvaluation": false,
+ "threads": 4,
+ "machine": {
+  "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "logicalCpus": 12,
+  "ramGB": 15.7,
+  "python": "3.12.11",
+  "torch": "2.14.1+cpu",
+  "transformers": "5.19.0"
+ },
+ "results": [
+  {
+   "key": "siglip2-base",
+   "model_id": "google/siglip2-base-patch16-224",
+   "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+   "license": "apache-2.0",
+   "loadAndFirstFrameMs": 43702.1,
+   "taxonomyColdBuildMs": 9833.0,
+   "taxonomyWarmCacheMs": 18.7,
+   "latencyPerFrameMs": {
+    "n": 30,
+    "mean": 162.4,
+    "p50": 156.0,
+    "p95": 197.6,
+    "max": 247.5
+   },
+   "latencyPerReelMs": {
+    "n": 6,
+    "mean": 846.2,
+    "p50": 843.9,
+    "p95": 918.0,
+    "max": 918.0
+   },
+   "framesPerReel": 5,
+   "stageMeanMs": {
+    "embed_frames": 825.5,
+    "pool_frames": 18.17,
+    "score_visual": 2.67
+   },
+   "cpuSecondsPerWallSecond": 3.95,
+   "memoryMB": {
+    "rss": 2053,
+    "peak": 2089
+   },
+   "determinism": {
+    "repeatMaxAbsDiff": 0.0,
+    "reversedOrderMaxAbsDiff": 0.0
+   },
+   "zeroShotByTau": {
+    "0.01": {
+     "top1": 9,
+     "top3": 13,
+     "of": 16,
+     "meanTopProbability": 0.423
+    },
+    "0.02": {
+     "top1": 9,
+     "top3": 13,
+     "of": 16,
+     "meanTopProbability": 0.181
+    },
+    "0.05": {
+     "top1": 9,
+     "top3": 13,
+     "of": 16,
+     "meanTopProbability": 0.075
+    },
+    "0.1": {
+     "top1": 9,
+     "top3": 13,
+     "of": 16,
+     "meanTopProbability": 0.052
+    }
+   }
+  },
+  {
+   "key": "siglip-multilingual",
+   "model_id": "google/siglip-base-patch16-256-multilingual",
+   "revision": "8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6",
+   "license": "apache-2.0",
+   "loadAndFirstFrameMs": 13531.8,
+   "taxonomyColdBuildMs": 9639.0,
+   "taxonomyWarmCacheMs": 12.3,
+   "latencyPerFrameMs": {
+    "n": 30,
+    "mean": 205.0,
+    "p50": 201.9,
+    "p95": 227.0,
+    "max": 233.1
+   },
+   "latencyPerReelMs": {
+    "n": 6,
+    "mean": 1036.6,
+    "p50": 1050.5,
+    "p95": 1064.7,
+    "max": 1064.7
+   },
+   "framesPerReel": 5,
+   "stageMeanMs": {
+    "embed_frames": 1036.33,
+    "pool_frames": 0.0,
+    "score_visual": 0.0
+   },
+   "cpuSecondsPerWallSecond": 3.95,
+   "memoryMB": {
+    "rss": 1857,
+    "peak": 2089
+   },
+   "determinism": {
+    "repeatMaxAbsDiff": 0.0,
+    "reversedOrderMaxAbsDiff": 0.0
+   },
+   "zeroShotByTau": {
+    "0.01": {
+     "top1": 14,
+     "top3": 14,
+     "of": 16,
+     "meanTopProbability": 0.684
+    },
+    "0.02": {
+     "top1": 14,
+     "top3": 14,
+     "of": 16,
+     "meanTopProbability": 0.379
+    },
+    "0.05": {
+     "top1": 14,
+     "top3": 14,
+     "of": 16,
+     "meanTopProbability": 0.114
+    },
+    "0.1": {
+     "top1": 14,
+     "top3": 14,
+     "of": 16,
+     "meanTopProbability": 0.065
+    }
+   }
+  }
+ ]
+}

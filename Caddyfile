@@ -1,0 +1,27 @@
+# TLS front for a hosted deployment (audit H-4, ADR-019). Used only by docker-compose.hosted.yml:
+#
+#   REF_DOMAIN=ref.example.org docker compose -f docker-compose.yml -f docker-compose.hosted.yml up -d
+#
+# Caddy gets and renews the certificate for REF_DOMAIN by itself (the name must point at this
+# machine and ports 80 and 443 must be reachable). It is the only service that listens on a public
+# address. It sets X-Forwarded-For to the address it saw and ignores any value the client sent
+# (Caddy's default); the dashboard's nginx appends to it and the API believes the right-most
+# address that is not one of its own proxies (REF_TRUSTED_PROXIES).
+{$REF_DOMAIN} {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+
+	# Nothing the API accepts is larger than the 800 KB frame upload.
+	request_body {
+		max_size 1MB
+	}
+
+	reverse_proxy dashboard:80
+}

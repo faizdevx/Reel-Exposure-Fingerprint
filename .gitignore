@@ -1,0 +1,26 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+
+# M0 spikes: local-only data (third-party Reel content, logs, model caches)
+spikes/data/
+spikes/**/out/
+spikes/**/results/raw/
+.cache/
+
+# Playwright
+playwright-report/
+test-results/

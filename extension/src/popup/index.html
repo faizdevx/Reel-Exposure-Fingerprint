@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reel Exposure Fingerprint</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Reel Exposure Fingerprint</h1>
+      <p id="badge" class="badge" role="status" hidden>● MONITORING</p>
+      <p id="status" role="status">Loading…</p>
+      <div class="row">
+        <button id="toggle" type="button" disabled>Start monitoring</button>
+      </div>
+      <p class="note" id="note"></p>
+      <p class="note" id="error" role="alert"></p>
+
+      <section id="consent-screen" hidden aria-labelledby="consent-h">
+        <h2 id="consent-h">Before you start</h2>
+        <div id="policy"></div>
+        <label class="check">
+          <input id="consent-check" type="checkbox" />
+          I have read this and I agree.
+        </label>
+        <button id="consent-grant" type="button" disabled>Give consent</button>
+        <p class="note">Policy version <span id="policy-version"></span></p>
+      </section>
+
+      <section id="consent-given" hidden aria-labelledby="given-h">
+        <h2 id="given-h">Consent</h2>
+        <p id="consent-summary"></p>
+        <button id="consent-revoke" type="button">Revoke consent</button>
+      </section>
+
+      <section aria-labelledby="token-h">
+        <h2 id="token-h">Extension token</h2>
+        <p id="token-status"></p>
+        <label for="token-input">Paste token</label>
+        <input id="token-input" type="password" autocomplete="off" spellcheck="false" />
+        <div class="row">
+          <button id="token-save" type="button">Save token</button>
+          <button id="token-clear" type="button">Remove token</button>
+        </div>
+        <p class="note" id="token-error" role="alert"></p>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

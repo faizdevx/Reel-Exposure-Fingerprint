@@ -1,0 +1,68 @@
+body {
+  font: 13px system-ui, sans-serif;
+  width: 300px;
+  margin: 0;
+}
+main {
+  padding: 12px;
+}
+h1 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+h2 {
+  font-size: 13px;
+  margin: 12px 0 4px;
+}
+input {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 2px 0 6px;
+}
+button {
+  padding: 6px 10px;
+}
+.row {
+  display: flex;
+  gap: 6px;
+}
+.note {
+  color: #555;
+  font-size: 12px;
+}
+h3 {
+  font-size: 12px;
+  margin: 8px 0 2px;
+}
+ul {
+  margin: 0 0 4px;
+  padding-left: 18px;
+}
+#policy {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+}
+.check {
+  display: block;
+  margin: 4px 0;
+}
+.check input {
+  width: auto;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #c62828;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+}
+.badge[hidden] {
+  display: none;
+}

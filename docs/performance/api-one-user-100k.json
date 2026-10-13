@@ -1,0 +1,439 @@
+{
+ "dashboard_api": {
+  "GET /fingerprint/current (engagement)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 48.881,
+    "mean": 14.943,
+    "min": 5.157,
+    "n": 450,
+    "p50": 13.991,
+    "p90": 19.599,
+    "p95": 22.2,
+    "p99": 29.14
+   },
+   "response_bytes": 2938,
+   "sequential_ms": {
+    "max": 6.101,
+    "mean": 4.675,
+    "min": 3.789,
+    "n": 150,
+    "p50": 4.544,
+    "p90": 5.489,
+    "p95": 5.69,
+    "p99": 6.034
+   }
+  },
+  "GET /fingerprint/current (exposure)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 15.115,
+    "mean": 10.301,
+    "min": 4.461,
+    "n": 450,
+    "p50": 10.236,
+    "p90": 11.955,
+    "p95": 12.579,
+    "p99": 13.595
+   },
+   "response_bytes": 2937,
+   "sequential_ms": {
+    "max": 7.322,
+    "mean": 4.63,
+    "min": 3.668,
+    "n": 150,
+    "p50": 4.44,
+    "p90": 5.337,
+    "p95": 5.866,
+    "p99": 7.057
+   }
+  },
+  "GET /fingerprint/history (day, 366)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 104.756,
+    "mean": 35.204,
+    "min": 17.354,
+    "n": 450,
+    "p50": 32.622,
+    "p90": 42.209,
+    "p95": 52.046,
+    "p99": 80.812
+   },
+   "response_bytes": 83374,
+   "sequential_ms": {
+    "max": 87.871,
+    "mean": 15.054,
+    "min": 11.72,
+    "n": 150,
+    "p50": 13.732,
+    "p90": 15.51,
+    "p95": 18.759,
+    "p99": 42.812
+   }
+  },
+  "GET /fingerprint/history (day, 90)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 74.06,
+    "mean": 31.636,
+    "min": 12.238,
+    "n": 450,
+    "p50": 30.077,
+    "p90": 37.359,
+    "p95": 42.43,
+    "p99": 70.986
+   },
+   "response_bytes": 75243,
+   "sequential_ms": {
+    "max": 49.938,
+    "mean": 13.364,
+    "min": 10.934,
+    "n": 150,
+    "p50": 12.756,
+    "p90": 14.577,
+    "p95": 15.009,
+    "p99": 34.078
+   }
+  },
+  "GET /fingerprint/history (session, 90)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 79.2,
+    "mean": 33.794,
+    "min": 13.86,
+    "n": 450,
+    "p50": 31.849,
+    "p90": 42.324,
+    "p95": 51.965,
+    "p99": 72.299
+   },
+   "response_bytes": 78194,
+   "sequential_ms": {
+    "max": 54.262,
+    "mean": 14.256,
+    "min": 11.17,
+    "n": 150,
+    "p50": 13.204,
+    "p90": 16.427,
+    "p95": 19.187,
+    "p99": 37.185
+   }
+  },
+  "GET /predictions/next": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 51.995,
+    "mean": 11.603,
+    "min": 4.429,
+    "n": 450,
+    "p50": 10.745,
+    "p90": 13.576,
+    "p95": 17.001,
+    "p99": 29.696
+   },
+   "response_bytes": 6221,
+   "sequential_ms": {
+    "max": 8.644,
+    "mean": 5.059,
+    "min": 3.92,
+    "n": 150,
+    "p50": 4.859,
+    "p90": 6.007,
+    "p95": 6.519,
+    "p99": 8.002
+   }
+  },
+  "GET /self-report": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 54.467,
+    "mean": 11.369,
+    "min": 4.061,
+    "n": 450,
+    "p50": 10.145,
+    "p90": 13.874,
+    "p95": 19.474,
+    "p99": 32.44
+   },
+   "response_bytes": 2057,
+   "sequential_ms": {
+    "max": 7.244,
+    "mean": 4.915,
+    "min": 3.344,
+    "n": 150,
+    "p50": 4.592,
+    "p90": 6.356,
+    "p95": 6.769,
+    "p99": 7.111
+   }
+  },
+  "GET /sessions": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 195.501,
+    "mean": 61.261,
+    "min": 28.607,
+    "n": 450,
+    "p50": 54.238,
+    "p90": 95.453,
+    "p95": 108.989,
+    "p99": 135.406
+   },
+   "response_bytes": 34001,
+   "sequential_ms": {
+    "max": 76.992,
+    "mean": 24.222,
+    "min": 16.138,
+    "n": 150,
+    "p50": 21.333,
+    "p90": 33.412,
+    "p95": 41.992,
+    "p99": 68.567
+   }
+  },
+  "GET /topics/{id}/evidence (engagement)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 1253.377,
+    "mean": 917.514,
+    "min": 660.476,
+    "n": 450,
+    "p50": 884.577,
+    "p90": 1085.817,
+    "p95": 1120.314,
+    "p99": 1165.755
+   },
+   "response_bytes": 55364,
+   "sequential_ms": {
+    "max": 674.152,
+    "mean": 513.999,
+    "min": 461.383,
+    "n": 150,
+    "p50": 493.261,
+    "p90": 577.678,
+    "p95": 622.871,
+    "p99": 665.16
+   }
+  },
+  "GET /topics/{id}/evidence (first page)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 2022.864,
+    "mean": 908.566,
+    "min": 701.848,
+    "n": 450,
+    "p50": 869.127,
+    "p90": 1059.524,
+    "p95": 1138.378,
+    "p99": 1423.77
+   },
+   "response_bytes": 11429,
+   "sequential_ms": {
+    "max": 2284.732,
+    "mean": 509.59,
+    "min": 419.285,
+    "n": 150,
+    "p50": 469.605,
+    "p90": 579.616,
+    "p95": 653.608,
+    "p99": 1254.866
+   }
+  },
+  "GET /topics/{id}/evidence (offset 5000)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 1380.475,
+    "mean": 841.632,
+    "min": 649.595,
+    "n": 450,
+    "p50": 796.258,
+    "p90": 1039.775,
+    "p95": 1118.222,
+    "p99": 1252.727
+   },
+   "response_bytes": 11469,
+   "sequential_ms": {
+    "max": 698.593,
+    "mean": 483.124,
+    "min": 427.295,
+    "n": 150,
+    "p50": 469.014,
+    "p90": 556.736,
+    "p95": 576.717,
+    "p99": 620.406
+   }
+  },
+  "_clients": 3,
+  "_server_rss_mb": 98.2
+ },
+ "environment": {
+  "available_memory_gb_at_start": 1.43,
+  "client_cpu_ids": [
+   1,
+   3,
+   5,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "database": {
+   "pgvector": "0.6.2",
+   "server": "PostgreSQL 16.2 on x86_64-pc-mingw64",
+   "shared_buffers": "128MB"
+  },
+  "env": {},
+  "gpu": false,
+  "logical_cpus": 12,
+  "measured_at": "2026-10-10T10:01:13+00:00",
+  "memory_gb": 15.7,
+  "packages": {
+   "fastapi": "0.142.2",
+   "numpy": "2.5.3",
+   "onnxruntime": "1.31.0",
+   "pillow": "12.3.0",
+   "psutil": "7.2.2",
+   "psycopg": "3.3.6",
+   "rapidocr": "3.9.2",
+   "sqlalchemy": "2.1.3",
+   "torch": "2.14.1+cpu",
+   "transformers": "5.19.0",
+   "uvicorn": "0.54.0"
+  },
+  "physical_cores": 6,
+  "pinned_cpus": 4,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.11",
+  "server_cpu_ids": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "threads": 4
+ },
+ "event_upload": {
+  "POST /events, batch of 1": {
+   "body_bytes": 599,
+   "ms": {
+    "max": 7.188,
+    "mean": 6.012,
+    "min": 5.291,
+    "n": 10,
+    "p50": 5.977,
+    "p90": 6.459,
+    "p95": 6.823,
+    "p99": 7.115
+   }
+  },
+  "POST /events, batch of 10": {
+   "body_bytes": 6299,
+   "ms": {
+    "max": 17.195,
+    "mean": 16.359,
+    "min": 15.69,
+    "n": 10,
+    "p50": 16.404,
+    "p90": 16.87,
+    "p95": 17.033,
+    "p99": 17.163
+   }
+  },
+  "POST /events, batch of 50": {
+   "body_bytes": 31064,
+   "ms": {
+    "max": 174.104,
+    "mean": 93.354,
+    "min": 65.748,
+    "n": 10,
+    "p50": 80.385,
+    "p90": 138.769,
+    "p95": 156.437,
+    "p99": 170.571
+   }
+  },
+  "POST /events, replay of 50 stored events": {
+   "ms": {
+    "max": 77.182,
+    "mean": 58.191,
+    "min": 46.813,
+    "n": 10,
+    "p50": 54.409,
+    "p90": 74.658,
+    "p95": 75.92,
+    "p99": 76.929
+   }
+  },
+  "POST /events/{id}/frames, 5 frames": {
+   "jpeg_bytes": 452416,
+   "ms": {
+    "max": 22.132,
+    "mean": 19.432,
+    "min": 17.605,
+    "n": 10,
+    "p50": 19.031,
+    "p90": 21.172,
+    "p95": 21.652,
+    "p99": 22.036
+   }
+  },
+  "_server_rss_mb": 101.5
+ },
+ "seed": 0,
+ "seeded_database": {
+  "exposures": 100000,
+  "insert_seconds": 87.4,
+  "rebuild": {
+   "user0": {
+    "fingerprint_rebuild_s": 17.02,
+    "prediction_rebuild_s": 103.16,
+    "prediction_rows": 500000,
+    "snapshots": 600
+   }
+  },
+  "sessions_per_user": 200,
+  "tables": {
+   "fingerprint_snapshots": {
+    "rows": 600,
+    "total_mb": 1.3
+   },
+   "prediction_state": {
+    "rows": 1,
+    "total_mb": 0.0
+   },
+   "predictions": {
+    "rows": 500000,
+    "total_mb": 448.0
+   },
+   "reel_exposures": {
+    "rows": 100000,
+    "total_mb": 37.1
+   },
+   "sessions": {
+    "rows": 200,
+    "total_mb": 0.1
+   },
+   "topic_assignments": {
+    "rows": 2800000,
+    "total_mb": 431.0
+   },
+   "topic_transitions": {
+    "rows": 395,
+    "total_mb": 0.1
+   },
+   "topics": {
+    "rows": 29,
+    "total_mb": 0.0
+   }
+  },
+  "topics": 28,
+  "user_ids": [
+   "00000010-0000-0000-0000-000000000000"
+  ],
+  "users": 1
+ },
+ "suite": "api"
+}

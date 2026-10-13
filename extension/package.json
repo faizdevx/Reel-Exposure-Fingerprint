@@ -1,0 +1,33 @@
+{
+  "name": "ref-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reel Exposure Fingerprint Chrome extension (M1 skeleton)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "bench": "node bench/browser-bench.mjs --out ../docs/performance/browser.json"
+  },
+  "dependencies": {
+    "idb": "^8.0.4"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^3.0.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.0",
+    "@types/chrome": "^0.3.4",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.12.0",
+    "fake-indexeddb": "^6.2.5",
+    "globals": "^17.13.0",
+    "jsdom": "^30.1.2",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3"
+  }
+}

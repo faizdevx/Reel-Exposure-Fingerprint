@@ -1,0 +1,319 @@
+{
+ "suite": "browser",
+ "seed": "none (deterministic generated page)",
+ "environment": {
+  "measured_at": "2026-10-10T07:47:03.745Z",
+  "chromium": "156.0.8078.4",
+  "headless": true,
+  "viewport": "1280x800",
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "logical_cpus": 12,
+  "memory_gb": 15.7,
+  "platform": "win32 10.0.26200",
+  "node": "v24.13.1"
+ },
+ "page": {
+  "reels": 60,
+  "extra_elements_per_reel": 150,
+  "steps_per_detection_run": 40,
+  "scroll_seconds_per_trial": 8
+ },
+ "scenarios": [
+  {
+   "cpu_slowdown": 1,
+   "dom_elements": 46028,
+   "detection_instant_jump": {
+    "from_60_percent_ms": {
+     "n": 40,
+     "min": 1.9,
+     "mean": 6.593,
+     "p50": 6.7,
+     "p90": 7.41,
+     "p95": 7.535,
+     "p99": 8.322,
+     "max": 8.4
+    },
+    "from_scroll_command_ms": {
+     "n": 40,
+     "min": 19.6,
+     "mean": 45.618,
+     "p50": 21.65,
+     "p90": 25.88,
+     "p95": 27.51,
+     "p99": 590.077,
+     "max": 947.2
+    },
+    "missed": 0
+   },
+   "detection_smooth_scroll": {
+    "from_60_percent_ms": {
+     "n": 39,
+     "min": 5.5,
+     "mean": 6.621,
+     "p50": 6.6,
+     "p90": 7.34,
+     "p95": 8.01,
+     "p99": 8.41,
+     "max": 8.6
+    },
+    "from_scroll_command_ms": {
+     "n": 39,
+     "min": 94.3,
+     "mean": 102.921,
+     "p50": 102.9,
+     "p90": 109.56,
+     "p95": 113.22,
+     "p99": 116.19,
+     "max": 117.9
+    },
+    "missed": 1
+   },
+   "read_reel_metadata_ms": {
+    "n": 120,
+    "min": 3.5,
+    "mean": 4.205,
+    "p50": 4,
+    "p90": 4.91,
+    "p95": 5.1,
+    "p99": 5.681,
+    "max": 5.7
+   },
+   "intersection_callback_ms": {
+    "n": 308,
+    "min": 0,
+    "mean": 3.617,
+    "p50": 0.1,
+    "p90": 11.6,
+    "p95": 12.33,
+    "p99": 14.651,
+    "max": 15.3
+   },
+   "intersection_callbacks_over_5ms": 103,
+   "mutation_batches": {
+    "1_reels_added_per_batch": {
+     "mutation_callback_ms": {
+      "n": 25,
+      "min": 0,
+      "mean": 0.016,
+      "p50": 0,
+      "p90": 0.1,
+      "p95": 0.1,
+      "p99": 0.1,
+      "max": 0.1
+     },
+     "over_5ms": 0
+    },
+    "5_reels_added_per_batch": {
+     "mutation_callback_ms": {
+      "n": 25,
+      "min": 0,
+      "mean": 0.128,
+      "p50": 0.1,
+      "p90": 0.1,
+      "p95": 0.18,
+      "p99": 1.188,
+      "max": 1.5
+     },
+     "over_5ms": 0
+    },
+    "10_reels_added_per_batch": {
+     "mutation_callback_ms": {
+      "n": 25,
+      "min": 0.1,
+      "mean": 0.216,
+      "p50": 0.2,
+      "p90": 0.3,
+      "p95": 0.38,
+      "p99": 0.476,
+      "max": 0.5
+     },
+     "over_5ms": 0
+    }
+   },
+   "scroll_without_tracker": {
+    "frames": 1426,
+    "frame_ms": {
+     "n": 1426,
+     "min": 16.5,
+     "mean": 16.806,
+     "p50": 16.7,
+     "p90": 16.7,
+     "p95": 16.8,
+     "p99": 16.8,
+     "max": 33.4
+    },
+    "frames_over_20ms": 12,
+    "frames_over_33ms": 12,
+    "frames_over_50ms": 0,
+    "long_tasks": 0,
+    "longest_task_ms": 0
+   },
+   "scroll_with_tracker": {
+    "frames": 1437,
+    "frame_ms": {
+     "n": 1437,
+     "min": 16.5,
+     "mean": 16.666,
+     "p50": 16.7,
+     "p90": 16.7,
+     "p95": 16.7,
+     "p99": 16.8,
+     "max": 16.8
+    },
+    "frames_over_20ms": 0,
+    "frames_over_33ms": 0,
+    "frames_over_50ms": 0,
+    "long_tasks": 0,
+    "longest_task_ms": 0
+   }
+  },
+  {
+   "cpu_slowdown": 4,
+   "dom_elements": 46028,
+   "detection_instant_jump": {
+    "from_60_percent_ms": {
+     "n": 40,
+     "min": 26.8,
+     "mean": 29.675,
+     "p50": 29.2,
+     "p90": 33.52,
+     "p95": 33.725,
+     "p99": 34.566,
+     "max": 34.8
+    },
+    "from_scroll_command_ms": {
+     "n": 40,
+     "min": 85.4,
+     "mean": 109.103,
+     "p50": 109.7,
+     "p90": 115.55,
+     "p95": 116.66,
+     "p99": 130.811,
+     "max": 136.7
+    },
+    "missed": 0
+   },
+   "detection_smooth_scroll": {
+    "from_60_percent_ms": {
+     "n": 39,
+     "min": 24.8,
+     "mean": 31.103,
+     "p50": 28.8,
+     "p90": 38.5,
+     "p95": 43.09,
+     "p99": 55.91,
+     "max": 56.1
+    },
+    "from_scroll_command_ms": {
+     "n": 39,
+     "min": 122,
+     "mean": 142.644,
+     "p50": 133.4,
+     "p90": 177.08,
+     "p95": 194.48,
+     "p99": 218.27,
+     "max": 229.1
+    },
+    "missed": 1
+   },
+   "read_reel_metadata_ms": {
+    "n": 120,
+    "min": 20.4,
+    "mean": 24.544,
+    "p50": 24.8,
+    "p90": 27.62,
+    "p95": 28.115,
+    "p99": 29.381,
+    "max": 29.7
+   },
+   "intersection_callback_ms": {
+    "n": 265,
+    "min": 0,
+    "mean": 17.281,
+    "p50": 0.2,
+    "p90": 54.24,
+    "p95": 56.54,
+    "p99": 65.3,
+    "max": 86.7
+   },
+   "intersection_callbacks_over_5ms": 87,
+   "mutation_batches": {
+    "1_reels_added_per_batch": {
+     "mutation_callback_ms": {
+      "n": 25,
+      "min": 0,
+      "mean": 0.152,
+      "p50": 0.1,
+      "p90": 0.3,
+      "p95": 0.38,
+      "p99": 0.476,
+      "max": 0.5
+     },
+     "over_5ms": 0
+    },
+    "5_reels_added_per_batch": {
+     "mutation_callback_ms": {
+      "n": 25,
+      "min": 0.3,
+      "mean": 0.764,
+      "p50": 0.6,
+      "p90": 1.26,
+      "p95": 1.3,
+      "p99": 1.3,
+      "max": 1.3
+     },
+     "over_5ms": 0
+    },
+    "10_reels_added_per_batch": {
+     "mutation_callback_ms": {
+      "n": 25,
+      "min": 0.6,
+      "mean": 1.6,
+      "p50": 1.5,
+      "p90": 2.44,
+      "p95": 2.76,
+      "p99": 2.952,
+      "max": 3
+     },
+     "over_5ms": 0
+    }
+   },
+   "scroll_without_tracker": {
+    "frames": 1158,
+    "frame_ms": {
+     "n": 1158,
+     "min": 16.5,
+     "mean": 20.84,
+     "p50": 16.7,
+     "p90": 16.8,
+     "p95": 66.6,
+     "p99": 83.443,
+     "max": 266.7
+    },
+    "frames_over_20ms": 77,
+    "frames_over_33ms": 77,
+    "frames_over_50ms": 66,
+    "long_tasks": 68,
+    "longest_task_ms": 200
+   },
+   "scroll_with_tracker": {
+    "frames": 1027,
+    "frame_ms": {
+     "n": 1027,
+     "min": 16.5,
+     "mean": 23.433,
+     "p50": 16.7,
+     "p90": 16.8,
+     "p95": 83.3,
+     "p99": 133.4,
+     "max": 166.7
+    },
+    "frames_over_20ms": 84,
+    "frames_over_33ms": 84,
+    "frames_over_50ms": 71,
+    "long_tasks": 72,
+    "longest_task_ms": 151
+   }
+  }
+ ]
+}

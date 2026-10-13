@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 13px system-ui, sans-serif; width: 340px; margin: 10px; }
+  h1 { font-size: 14px; margin: 0 0 6px; }
+  fieldset { border: 1px solid #ccc; margin: 0 0 8px; padding: 6px 8px; }
+  legend { font-weight: 600; }
+  button { margin: 2px 2px 2px 0; }
+  .notice { font-size: 12px; color: #444; }
+  pre { background: #f4f4f4; padding: 6px; max-height: 160px; overflow: auto; font-size: 11px; white-space: pre-wrap; }
+  input[type=number] { width: 70px; }
+</style>
+</head>
+<body>
+<h1>REF M0 probe (throwaway)</h1>
+
+<fieldset>
+  <legend>Consent</legend>
+  <p class="notice">
+    While recording is on and you are on instagram.com Reels, this probe stores locally (in this
+    browser only): Reel shortcodes, creator handle, caption, hashtags, timing, dwell, video state,
+    and test frames from the visible Reel if "save frames" is on. It never reads cookies, passwords,
+    tokens or network responses, never scrolls or clicks, and sends nothing to any server.
+    You scroll by hand. Turn recording off or clear the log at any time.
+  </p>
+  <label><input type="checkbox" id="consent"> I consent to this local recording</label>
+</fieldset>
+
+<fieldset>
+  <legend>Recording</legend>
+  <label><input type="checkbox" id="recording"> Recording on</label><br>
+  <label><input type="checkbox" id="saveFrames"> Save test frames (for ML bench; local only)</label>
+  <p class="notice">After turning recording on, reload the Reels tab (F5) once so the host-permission capture path is tested without an activeTab grant.</p>
+</fieldset>
+
+<fieldset>
+  <legend>Experiments</legend>
+  <button id="capture">captureVisibleTab now (activeTab)</button>
+  <button id="rate">Capture rate test (5 calls)</button><br>
+  <label>Reels I scrolled by hand (my own count): <input type="number" id="groundTruth" min="0"></label>
+</fieldset>
+
+<fieldset>
+  <legend>Data</legend>
+  <button id="exportLog">Export log JSON</button>
+  <button id="exportFrames">Export frames JSON</button>
+  <button id="clear">Clear log + frames</button>
+</fieldset>
+
+<pre id="status">…</pre>
+<script src="popup.js"></script>
+</body>
+</html>

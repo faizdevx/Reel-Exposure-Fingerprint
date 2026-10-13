@@ -1,0 +1,35 @@
+# Hosted mode (audit H-4, ADR-019): TLS in front, secure cookies, nothing else published.
+#
+#   REF_DOMAIN=ref.example.org docker compose -f docker-compose.yml -f docker-compose.hosted.yml up -d
+#
+# The extension must be built for the same server: VITE_REF_API_BASE=https://ref.example.org
+# npm run build (extension/src/api-base.ts refuses plain HTTP for any other host).
+services:
+  api:
+    environment:
+      # The API refuses to start in production without secure cookies (app/config.py).
+      REF_ENVIRONMENT: production
+      REF_COOKIE_SECURE: "true"
+
+  dashboard:
+    # No published port: only Caddy reaches it, on the compose network.
+    ports: !reset []
+
+  caddy:
+    image: caddy:2.8-alpine
+    environment:
+      REF_DOMAIN: ${REF_DOMAIN:?set REF_DOMAIN to the public name of this server}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - dashboard
+    restart: unless-stopped
+
+volumes:
+  caddy-data:
+  caddy-config:

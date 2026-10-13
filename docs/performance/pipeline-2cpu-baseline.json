@@ -1,0 +1,225 @@
+{
+ "environment": {
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "env": {},
+  "gpu": false,
+  "logical_cpus": 12,
+  "measured_at": "2026-10-10T08:10:45+00:00",
+  "memory_gb": 15.7,
+  "packages": {
+   "fastapi": "0.142.2",
+   "numpy": "2.5.3",
+   "onnxruntime": "1.31.0",
+   "pillow": "12.3.0",
+   "psutil": "7.2.2",
+   "psycopg": "3.3.6",
+   "rapidocr": "3.9.2",
+   "sqlalchemy": "2.1.3",
+   "torch": "2.14.1+cpu",
+   "transformers": "5.19.0",
+   "uvicorn": "0.54.0"
+  },
+  "physical_cores": 6,
+  "pinned_cpu_ids": [
+   0,
+   2
+  ],
+  "pinned_cpus": 2,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.11",
+  "threads": 2
+ },
+ "result": {
+  "cpu_ids_per_worker": [
+   [
+    0,
+    2
+   ]
+  ],
+  "failed_stages": [],
+  "fingerprint_rebuild_seconds": 0.133,
+  "frames_per_reel": 5,
+  "load_and_warmup_ms_per_worker": [
+   71203.5
+  ],
+  "ocr": "devanagari",
+  "ocr_frames_per_reel": 2,
+  "ort_spinning": true,
+  "peak_rss_mb_per_worker": [
+   1010.1
+  ],
+  "per_reel_ocr_ms": {
+   "max": 2795.135,
+   "mean": 1595.613,
+   "min": 1305.054,
+   "n": 60,
+   "p50": 1519.661,
+   "p90": 1897.672,
+   "p95": 2151.371,
+   "p99": 2667.79
+  },
+  "per_reel_process_ms": {
+   "max": 3038.078,
+   "mean": 1630.121,
+   "min": 1407.506,
+   "n": 60,
+   "p50": 1546.721,
+   "p90": 1979.954,
+   "p95": 2298.566,
+   "p99": 2661.566
+  },
+  "per_reel_total_ms": {
+   "max": 5617.375,
+   "mean": 3225.733,
+   "min": 2721.701,
+   "n": 60,
+   "p50": 3037.112,
+   "p90": 3733.463,
+   "p95": 4187.714,
+   "p99": 5322.86
+  },
+  "prediction_rebuild_seconds": 0.104,
+  "reels": 60,
+  "reels_per_second": 0.3099,
+  "seconds_per_reel_wall": 3.227,
+  "stage_ms": {
+   "assign_other": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "cache_lookup": {
+    "max": 16.0,
+    "mean": 5.75,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 16.0,
+    "p95": 16.0,
+    "p99": 16.0
+   },
+   "embed_frames": {
+    "max": 2172.0,
+    "mean": 1484.6,
+    "min": 1296.0,
+    "n": 60,
+    "p50": 1422.0,
+    "p90": 1708.9,
+    "p95": 2018.2,
+    "p99": 2162.56
+   },
+   "embed_text": {
+    "max": 203.0,
+    "mean": 87.8,
+    "min": 31.0,
+    "n": 60,
+    "p50": 78.0,
+    "p90": 110.0,
+    "p95": 126.55,
+    "p99": 194.15
+   },
+   "fuse": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "load_taxonomy_embeddings": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "load_visual_taxonomy_embeddings": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "normalize": {
+    "max": 16.0,
+    "mean": 1.05,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 15.05,
+    "p99": 16.0
+   },
+   "pool_frames": {
+    "max": 16.0,
+    "mean": 0.267,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 6.56
+   },
+   "score_topics": {
+    "max": 15.0,
+    "mean": 0.25,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 6.15
+   },
+   "score_visual": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 60,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "store_assignments": {
+    "max": 765.0,
+    "mean": 30.167,
+    "min": 0.0,
+    "n": 60,
+    "p50": 16.0,
+    "p90": 31.1,
+    "p95": 47.0,
+    "p99": 415.13
+   },
+   "store_features": {
+    "max": 203.0,
+    "mean": 17.967,
+    "min": 0.0,
+    "n": 60,
+    "p50": 16.0,
+    "p90": 31.0,
+    "p95": 31.0,
+    "p99": 166.42
+   }
+  },
+  "threads_per_worker": 2,
+  "total_with_post_seconds": 193.87,
+  "visual_model": "siglip2-base",
+  "wall_seconds_for_all_reels": 193.63,
+  "workers": 1
+ },
+ "seed": 0,
+ "suite": "pipeline"
+}

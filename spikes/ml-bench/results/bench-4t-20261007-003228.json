@@ -1,0 +1,68 @@
+{
+ "startedAt": "2026-10-06T19:01:22.259797+00:00",
+ "threads": 4,
+ "machine": {
+  "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "logicalCpus": 12,
+  "ramGB": 15.7,
+  "python": "3.12.11",
+  "torch": "2.14.1+cpu",
+  "transformers": "5.19.0"
+ },
+ "framesDir": "D:\\insta_recom_exten\\reel-exposure-fingerprint\\spikes\\data\\synthetic_frames",
+ "nFrames": 30,
+ "e5": {
+  "model": "intfloat/multilingual-e5-small",
+  "downloadOrCacheMs": 32434.9,
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "loadMs": 4026.8,
+  "dim": 384,
+  "emptyCaptionsSkipped": 1,
+  "latencyBatch1Ms": {
+   "n": 37,
+   "p50": 20.2,
+   "p95": 40.3,
+   "max": 48.2
+  },
+  "batchAllMs": 429.8,
+  "batchAllN": 37,
+  "determinism": {
+   "sameBatchMaxAbsDiff": 0.0,
+   "batch1VsBatchedMaxAbsDiff": 1.0058283805847168e-07
+  },
+  "sanityZeroShot": {
+   "n": 36,
+   "top1": 0.972,
+   "top3": 1.0
+  },
+  "sanityByLang": {
+   "en": {
+    "n": 12,
+    "top1": 12,
+    "top3": 12
+   },
+   "hi": {
+    "n": 12,
+    "top1": 11,
+    "top3": 12
+   },
+   "hinglish": {
+    "n": 12,
+    "top1": 12,
+    "top3": 12
+   }
+  },
+  "misses": [
+   {
+    "text": "जब टीचर बोले कल टेस्ट है 😂😂 #मज़ेदार #कॉमेडी",
+    "want": "comedy_memes",
+    "got": [
+     "education_exams",
+     "comedy_memes",
+     "tech_coding"
+    ]
+   }
+  ]
+ },
+ "rssAfterE5MB": 426
+}

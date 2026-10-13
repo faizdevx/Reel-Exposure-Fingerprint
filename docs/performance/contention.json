@@ -1,0 +1,100 @@
+{
+ "environment": {
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "env": {},
+  "gpu": false,
+  "logical_cpus": 12,
+  "measured_at": "2026-10-10T07:59:57+00:00",
+  "memory_gb": 15.7,
+  "packages": {
+   "fastapi": "0.142.2",
+   "numpy": "2.5.3",
+   "onnxruntime": "1.31.0",
+   "pillow": "12.3.0",
+   "psutil": "7.2.2",
+   "psycopg": "3.3.6",
+   "rapidocr": "3.9.2",
+   "sqlalchemy": "2.1.3",
+   "torch": "2.14.1+cpu",
+   "transformers": "5.19.0",
+   "uvicorn": "0.54.0"
+  },
+  "physical_cores": 6,
+  "pinned_cpu_ids": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "pinned_cpus": 4,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.11",
+  "threads": 4
+ },
+ "seed": 0,
+ "suite": "contention",
+ "text_embed_ms_by_situation": {
+  "after_ocr": {
+   "max": 181.426,
+   "mean": 107.544,
+   "min": 70.228,
+   "n": 30,
+   "p50": 102.367,
+   "p90": 135.593,
+   "p95": 156.962,
+   "p99": 179.387
+  },
+  "after_ocr_and_vision": {
+   "max": 21.2,
+   "mean": 14.306,
+   "min": 12.151,
+   "n": 30,
+   "p50": 13.538,
+   "p90": 16.888,
+   "p95": 19.036,
+   "p99": 20.779
+  },
+  "after_ocr_then_250ms_pause": {
+   "max": 19.13,
+   "mean": 12.711,
+   "min": 10.284,
+   "n": 30,
+   "p50": 11.963,
+   "p90": 16.076,
+   "p95": 16.423,
+   "p99": 18.368
+  },
+  "after_ocr_with_ort_spinning_off": {
+   "max": 41.998,
+   "mean": 15.197,
+   "min": 11.309,
+   "n": 30,
+   "p50": 13.136,
+   "p90": 17.598,
+   "p95": 24.968,
+   "p99": 38.211
+  },
+  "after_vision": {
+   "max": 17.384,
+   "mean": 13.374,
+   "min": 11.278,
+   "n": 30,
+   "p50": 12.838,
+   "p90": 15.934,
+   "p95": 16.274,
+   "p99": 17.101
+  },
+  "idle": {
+   "max": 32.901,
+   "mean": 13.267,
+   "min": 9.867,
+   "n": 30,
+   "p50": 10.929,
+   "p90": 19.057,
+   "p95": 29.538,
+   "p99": 32.065
+  }
+ },
+ "threads": 4,
+ "visual_model": "siglip2-base"
+}

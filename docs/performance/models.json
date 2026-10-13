@@ -1,0 +1,209 @@
+{
+ "environment": {
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "env": {},
+  "gpu": false,
+  "logical_cpus": 12,
+  "measured_at": "2026-10-10T06:59:12+00:00",
+  "memory_gb": 15.7,
+  "packages": {
+   "fastapi": "0.142.2",
+   "numpy": "2.5.3",
+   "onnxruntime": "1.31.0",
+   "pillow": "12.3.0",
+   "psutil": "7.2.2",
+   "psycopg": "3.3.6",
+   "rapidocr": "3.9.2",
+   "sqlalchemy": "2.1.3",
+   "torch": "2.14.1+cpu",
+   "transformers": "5.19.0",
+   "uvicorn": "0.54.0"
+  },
+  "physical_cores": 6,
+  "pinned_cpu_ids": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "pinned_cpus": 4,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.11",
+  "threads": 4
+ },
+ "ocr": {
+  "default": {
+   "engine": "rapidocr-default",
+   "first_call_ms": 5692.2,
+   "inputs": "generated 540x960 JPEG frames with English overlay text",
+   "mean_text_lines_per_frame": 2.5,
+   "one_frame_ms": {
+    "max": 797.687,
+    "mean": 618.391,
+    "min": 466.178,
+    "n": 40,
+    "p50": 612.965,
+    "p90": 686.378,
+    "p95": 698.764,
+    "p99": 771.806
+   },
+   "peak_rss_mb": 390.9,
+   "threads": 4,
+   "two_frames_per_reel_ms": {
+    "max": 1399.032,
+    "mean": 1191.709,
+    "min": 1057.06,
+    "n": 20,
+    "p50": 1196.067,
+    "p90": 1297.71,
+    "p95": 1377.397,
+    "p99": 1394.705
+   }
+  },
+  "devanagari": {
+   "engine": "rapidocr-devanagari",
+   "first_call_ms": 1681.9,
+   "inputs": "generated 540x960 JPEG frames with English overlay text",
+   "mean_text_lines_per_frame": 2.5,
+   "one_frame_ms": {
+    "max": 761.06,
+    "mean": 627.812,
+    "min": 505.605,
+    "n": 40,
+    "p50": 622.42,
+    "p90": 700.174,
+    "p95": 719.68,
+    "p99": 745.74
+   },
+   "peak_rss_mb": 382.9,
+   "threads": 4,
+   "two_frames_per_reel_ms": {
+    "max": 1463.243,
+    "mean": 1220.051,
+    "min": 1090.375,
+    "n": 20,
+    "p50": 1212.402,
+    "p90": 1333.353,
+    "p95": 1360.479,
+    "p99": 1442.69
+   }
+  }
+ },
+ "seed": 0,
+ "suite": "models",
+ "text_embedding": {
+  "embed_one_text_ms": {
+   "max": 68.287,
+   "mean": 12.933,
+   "min": 9.021,
+   "n": 100,
+   "p50": 11.398,
+   "p90": 15.934,
+   "p95": 19.057,
+   "p99": 29.726
+  },
+  "first_call_ms": 47465.8,
+  "inputs": "generated English, Hinglish and Hindi captions with hashtags",
+  "model": "intfloat/multilingual-e5-small",
+  "peak_rss_mb": 830.9,
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "taxonomy_embedding_build_ms": 61.8,
+  "threads": 4,
+  "whole_text_stage_ms": {
+   "max": 1403.138,
+   "mean": 25.357,
+   "min": 8.802,
+   "n": 100,
+   "p50": 11.065,
+   "p90": 13.044,
+   "p95": 14.6,
+   "p99": 34.781
+  }
+ },
+ "visual_embedding": {
+  "siglip-multilingual": {
+   "embed_one_frame_ms": {
+    "max": 319.477,
+    "mean": 225.102,
+    "min": 195.448,
+    "n": 40,
+    "p50": 218.926,
+    "p90": 253.092,
+    "p95": 271.504,
+    "p99": 303.622
+   },
+   "first_call_ms": 13556.5,
+   "inputs": "generated 540x960 JPEG frames",
+   "key": "siglip-multilingual",
+   "model": "google/siglip-base-patch16-256-multilingual",
+   "peak_rss_mb": 1738.7,
+   "revision": "8952a4eafcde3cb7ab46b1dd629b33f8784ca9c6",
+   "threads": 4,
+   "visual_topic_embedding_build_ms": 0.0,
+   "whole_visual_stage_per_reel_ms": {
+    "3_frames": {
+     "max": 718.741,
+     "mean": 641.883,
+     "min": 615.569,
+     "n": 13,
+     "p50": 637.187,
+     "p90": 660.585,
+     "p95": 685.681,
+     "p99": 712.129
+    },
+    "5_frames": {
+     "max": 1105.895,
+     "mean": 1062.343,
+     "min": 1028.745,
+     "n": 7,
+     "p50": 1059.914,
+     "p90": 1096.27,
+     "p95": 1101.082,
+     "p99": 1104.932
+    }
+   }
+  },
+  "siglip2-base": {
+   "embed_one_frame_ms": {
+    "max": 279.443,
+    "mean": 177.434,
+    "min": 155.481,
+    "n": 40,
+    "p50": 170.967,
+    "p90": 197.367,
+    "p95": 227.711,
+    "p99": 270.968
+   },
+   "first_call_ms": 17939.8,
+   "inputs": "generated 540x960 JPEG frames",
+   "key": "siglip2-base",
+   "model": "google/siglip2-base-patch16-224",
+   "peak_rss_mb": 1931.1,
+   "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+   "threads": 4,
+   "visual_topic_embedding_build_ms": 0.0,
+   "whole_visual_stage_per_reel_ms": {
+    "3_frames": {
+     "max": 543.517,
+     "mean": 509.042,
+     "min": 491.009,
+     "n": 13,
+     "p50": 502.955,
+     "p90": 533.716,
+     "p95": 538.627,
+     "p99": 542.539
+    },
+    "5_frames": {
+     "max": 1006.424,
+     "mean": 884.248,
+     "min": 847.357,
+     "n": 7,
+     "p50": 859.932,
+     "p90": 933.179,
+     "p95": 969.802,
+     "p99": 999.1
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,565 @@
+{
+  "taxonomy_version": "v1",
+  "topics": [
+    {
+      "id": 1,
+      "slug": "comedy_skits",
+      "label": "Comedy and skits",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "funny comedy skit with actors performing a joke",
+          "stand-up comedy clip with punchlines",
+          "prank video and funny reactions",
+          "relatable humour about everyday life"
+        ],
+        "hi": [
+          "हास्य स्केच जिसमें कलाकार मज़ेदार अभिनय करते हैं",
+          "स्टैंड-अप कॉमेडी और चुटकुले",
+          "प्रैंक वीडियो और मज़ेदार प्रतिक्रियाएँ",
+          "रोज़मर्रा की ज़िंदगी पर मज़ेदार व्यंग्य"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "slug": "memes_trends",
+      "label": "Memes and viral trends",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "meme template with caption text",
+          "viral internet trend or challenge",
+          "trending audio used for a meme",
+          "funny edited clip going viral"
+        ],
+        "hi": [
+          "कैप्शन के साथ मीम टेम्पलेट",
+          "वायरल इंटरनेट ट्रेंड या चैलेंज",
+          "मीम के लिए ट्रेंडिंग ऑडियो",
+          "वायरल हो रहा मज़ेदार एडिट किया हुआ क्लिप"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "slug": "music_dance",
+      "label": "Music and dance",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "song cover or singing performance",
+          "dance choreography to a popular song",
+          "musician playing guitar, piano or another instrument",
+          "new song release and lyric video"
+        ],
+        "hi": [
+          "गाने का कवर या गायन प्रस्तुति",
+          "लोकप्रिय गाने पर नृत्य कोरियोग्राफी",
+          "गिटार, पियानो या अन्य वाद्ययंत्र बजाता संगीतकार",
+          "नए गाने की रिलीज़ और लिरिक्स वीडियो"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "slug": "entertainment_celebrity",
+      "label": "Movies, TV and celebrities",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "movie scene clip and film trailer",
+          "bollywood actor interview or news",
+          "web series and TV show moments",
+          "celebrity gossip and red carpet look"
+        ],
+        "hi": [
+          "फ़िल्म का दृश्य और ट्रेलर",
+          "बॉलीवुड अभिनेता का इंटरव्यू या ख़बर",
+          "वेब सीरीज़ और टीवी शो के पल",
+          "सेलिब्रिटी गॉसिप और रेड कार्पेट लुक"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "slug": "cricket",
+      "label": "Cricket",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "cricket match highlights and wickets",
+          "IPL team and player updates",
+          "batting and bowling technique tips",
+          "cricket commentary and analysis"
+        ],
+        "hi": [
+          "क्रिकेट मैच की हाइलाइट्स और विकेट",
+          "आईपीएल टीम और खिलाड़ियों की ख़बरें",
+          "बल्लेबाज़ी और गेंदबाज़ी की तकनीक के टिप्स",
+          "क्रिकेट कमेंट्री और विश्लेषण"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "slug": "sports_other",
+      "label": "Other sports",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "football goals and match highlights",
+          "kabaddi, wrestling and olympic athletes",
+          "basketball, tennis and badminton play",
+          "sports training drills and athlete stories"
+        ],
+        "hi": [
+          "फ़ुटबॉल के गोल और मैच हाइलाइट्स",
+          "कबड्डी, कुश्ती और ओलंपिक खिलाड़ी",
+          "बास्केटबॉल, टेनिस और बैडमिंटन का खेल",
+          "खेल अभ्यास और खिलाड़ियों की कहानियाँ"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "slug": "fitness_workout",
+      "label": "Fitness and workouts",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "gym workout routine and exercises",
+          "bodybuilding and muscle building tips",
+          "home workout, yoga and stretching",
+          "weight loss transformation and diet plan"
+        ],
+        "hi": [
+          "जिम वर्कआउट रूटीन और व्यायाम",
+          "बॉडीबिल्डिंग और मांसपेशियाँ बनाने के टिप्स",
+          "घर पर वर्कआउट, योग और स्ट्रेचिंग",
+          "वज़न घटाने का बदलाव और डाइट प्लान"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "slug": "food_cooking",
+      "label": "Food and cooking",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "step by step recipe and cooking video",
+          "street food and restaurant review",
+          "baking, desserts and sweets",
+          "healthy meal prep and kitchen tips"
+        ],
+        "hi": [
+          "क्रमवार रेसिपी और खाना पकाने का वीडियो",
+          "स्ट्रीट फ़ूड और रेस्टोरेंट का रिव्यू",
+          "बेकिंग, मिठाई और डेज़र्ट",
+          "सेहतमंद मील प्रेप और रसोई के टिप्स"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "slug": "travel",
+      "label": "Travel and places",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "travel vlog of a tourist destination",
+          "hotel, resort and trip itinerary",
+          "beaches, mountains and sightseeing places",
+          "budget travel tips and road trip"
+        ],
+        "hi": [
+          "पर्यटन स्थल का ट्रैवल वीडियो",
+          "होटल, रिसॉर्ट और यात्रा कार्यक्रम",
+          "समुद्र तट, पहाड़ और घूमने की जगहें",
+          "सस्ती यात्रा के टिप्स और रोड ट्रिप"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "slug": "fashion_style",
+      "label": "Fashion and style",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "outfit ideas and styling tips",
+          "clothing haul and fashion trends",
+          "ethnic wear, saree and lehenga looks",
+          "sneakers, accessories and jewellery"
+        ],
+        "hi": [
+          "आउटफ़िट आइडिया और स्टाइलिंग टिप्स",
+          "कपड़ों की ख़रीदारी और फ़ैशन ट्रेंड",
+          "साड़ी और लहंगा जैसे पारंपरिक परिधान",
+          "स्नीकर्स, एक्सेसरीज़ और गहने"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "slug": "beauty_skincare",
+      "label": "Beauty and skincare",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "makeup tutorial and product review",
+          "skincare routine for clear skin",
+          "hair care, hairstyle and haircut",
+          "nail art and grooming tips"
+        ],
+        "hi": [
+          "मेकअप ट्यूटोरियल और प्रोडक्ट रिव्यू",
+          "साफ़ त्वचा के लिए स्किनकेयर रूटीन",
+          "बालों की देखभाल, हेयरस्टाइल और हेयरकट",
+          "नेल आर्ट और ग्रूमिंग टिप्स"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "slug": "tech_gadgets",
+      "label": "Technology and gadgets",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "smartphone review and comparison",
+          "laptop, headphones and gadget unboxing",
+          "new technology product launch",
+          "tech tips and phone tricks"
+        ],
+        "hi": [
+          "स्मार्टफ़ोन रिव्यू और तुलना",
+          "लैपटॉप, हेडफ़ोन और गैजेट अनबॉक्सिंग",
+          "नए तकनीकी प्रोडक्ट की लॉन्चिंग",
+          "टेक टिप्स और फ़ोन ट्रिक्स"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "slug": "ai_programming",
+      "label": "AI and programming",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "artificial intelligence tools and chatbots",
+          "programming tutorial and coding tips",
+          "software developer career and projects",
+          "machine learning and data science explained"
+        ],
+        "hi": [
+          "आर्टिफ़िशियल इंटेलिजेंस टूल्स और चैटबॉट",
+          "प्रोग्रामिंग ट्यूटोरियल और कोडिंग टिप्स",
+          "सॉफ़्टवेयर डेवलपर का करियर और प्रोजेक्ट",
+          "मशीन लर्निंग और डेटा साइंस की जानकारी"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "slug": "gaming",
+      "label": "Gaming",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "video game gameplay and walkthrough",
+          "mobile gaming such as BGMI and Free Fire",
+          "esports tournament and streamer clips",
+          "gaming console and PC build"
+        ],
+        "hi": [
+          "वीडियो गेम का गेमप्ले और वॉकथ्रू",
+          "मोबाइल गेमिंग जैसे बीजीएमआई और फ़्री फ़ायर",
+          "ई-स्पोर्ट्स टूर्नामेंट और स्ट्रीमर क्लिप",
+          "गेमिंग कंसोल और पीसी बिल्ड"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "slug": "education_study",
+      "label": "Education and exam preparation",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "exam preparation and study tips",
+          "school and college lessons explained",
+          "learning English and language skills",
+          "UPSC, JEE and NEET coaching advice"
+        ],
+        "hi": [
+          "परीक्षा की तैयारी और पढ़ाई के टिप्स",
+          "स्कूल और कॉलेज के पाठों की व्याख्या",
+          "अंग्रेज़ी और भाषा कौशल सीखना",
+          "यूपीएससी, जेईई और नीट की कोचिंग सलाह"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "slug": "business_entrepreneurship",
+      "label": "Business and entrepreneurship",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "starting a business and startup advice",
+          "marketing, sales and brand building",
+          "side hustle and online income ideas",
+          "entrepreneur success story"
+        ],
+        "hi": [
+          "बिज़नेस शुरू करने और स्टार्टअप की सलाह",
+          "मार्केटिंग, बिक्री और ब्रांड बनाना",
+          "साइड हसल और ऑनलाइन कमाई के आइडिया",
+          "उद्यमी की सफलता की कहानी"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "slug": "personal_finance",
+      "label": "Personal finance and investing",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "stock market investing and trading",
+          "mutual funds, SIP and saving money",
+          "credit card, loan and tax advice",
+          "cryptocurrency and financial literacy"
+        ],
+        "hi": [
+          "शेयर बाज़ार में निवेश और ट्रेडिंग",
+          "म्यूचुअल फ़ंड, एसआईपी और बचत",
+          "क्रेडिट कार्ड, लोन और टैक्स की सलाह",
+          "क्रिप्टोकरेंसी और वित्तीय साक्षरता"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "slug": "motivation_selfimprovement",
+      "label": "Motivation and self-improvement",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "motivational speech and success mindset",
+          "productivity habits and discipline",
+          "life lessons and inspirational quotes",
+          "self improvement and confidence tips"
+        ],
+        "hi": [
+          "प्रेरक भाषण और सफलता की सोच",
+          "उत्पादकता की आदतें और अनुशासन",
+          "जीवन के सबक और प्रेरणादायक विचार",
+          "आत्म-सुधार और आत्मविश्वास के टिप्स"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "slug": "spirituality_religion",
+      "label": "Spirituality and religion",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "devotional bhajan and temple darshan",
+          "religious festival and puja rituals",
+          "meditation and spiritual teachings",
+          "astrology, horoscope and zodiac signs"
+        ],
+        "hi": [
+          "भक्ति भजन और मंदिर दर्शन",
+          "धार्मिक त्योहार और पूजा विधि",
+          "ध्यान और आध्यात्मिक उपदेश",
+          "ज्योतिष, राशिफल और राशि चक्र"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "slug": "news_politics",
+      "label": "News and politics",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "breaking news and current events",
+          "politician speech and election campaign",
+          "government policy and public debate",
+          "international affairs and conflict reporting"
+        ],
+        "hi": [
+          "ताज़ा ख़बरें और मौजूदा घटनाएँ",
+          "नेता का भाषण और चुनाव प्रचार",
+          "सरकारी नीति और सार्वजनिक बहस",
+          "अंतरराष्ट्रीय मामले और संघर्ष की रिपोर्टिंग"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "slug": "science_facts",
+      "label": "Science, history and facts",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "science experiment and explained phenomenon",
+          "space, astronomy and planets",
+          "history facts and general knowledge",
+          "interesting facts and how things work"
+        ],
+        "hi": [
+          "विज्ञान प्रयोग और घटनाओं की व्याख्या",
+          "अंतरिक्ष, खगोल विज्ञान और ग्रह",
+          "इतिहास के तथ्य और सामान्य ज्ञान",
+          "दिलचस्प तथ्य और चीज़ें कैसे काम करती हैं"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "slug": "health_wellness",
+      "label": "Health and wellness",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "doctor advice on health and diseases",
+          "mental health, anxiety and stress relief",
+          "nutrition, sleep and healthy lifestyle",
+          "home remedies and ayurveda"
+        ],
+        "hi": [
+          "बीमारियों और सेहत पर डॉक्टर की सलाह",
+          "मानसिक स्वास्थ्य, चिंता और तनाव से राहत",
+          "पोषण, नींद और स्वस्थ जीवनशैली",
+          "घरेलू नुस्ख़े और आयुर्वेद"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "slug": "relationships_dating",
+      "label": "Relationships and dating",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "dating advice and relationship tips",
+          "couple moments and love stories",
+          "breakup, heartbreak and emotional quotes",
+          "wedding and engagement videos"
+        ],
+        "hi": [
+          "डेटिंग सलाह और रिश्तों के टिप्स",
+          "जोड़ों के पल और प्रेम कहानियाँ",
+          "ब्रेकअप, दिल टूटना और भावनात्मक शायरी",
+          "शादी और सगाई के वीडियो"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "slug": "parenting_family",
+      "label": "Parenting and family",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "parenting tips and raising children",
+          "cute baby and toddler moments",
+          "pregnancy and newborn care",
+          "family life and household relationships"
+        ],
+        "hi": [
+          "बच्चों की परवरिश और पेरेंटिंग टिप्स",
+          "प्यारे बच्चों और शिशुओं के पल",
+          "गर्भावस्था और नवजात की देखभाल",
+          "पारिवारिक जीवन और घर के रिश्ते"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "slug": "pets_animals",
+      "label": "Pets and animals",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "dog and puppy training and cute moments",
+          "cat and pet care",
+          "wildlife animals in nature",
+          "funny animal videos and rescue stories"
+        ],
+        "hi": [
+          "कुत्ते और पिल्ले की ट्रेनिंग और प्यारे पल",
+          "बिल्ली और पालतू जानवरों की देखभाल",
+          "प्रकृति में जंगली जानवर",
+          "मज़ेदार जानवरों के वीडियो और बचाव की कहानियाँ"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "slug": "automobiles",
+      "label": "Cars and motorcycles",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "car review and new car launch",
+          "motorcycle and bike riding",
+          "modified cars and supercars",
+          "vehicle maintenance and driving tips"
+        ],
+        "hi": [
+          "कार रिव्यू और नई कार की लॉन्चिंग",
+          "मोटरसाइकिल और बाइक राइडिंग",
+          "मॉडिफ़ाइड कारें और सुपरकार",
+          "वाहन रखरखाव और ड्राइविंग टिप्स"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "slug": "home_diy",
+      "label": "Home, DIY and gardening",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "DIY craft and handmade projects",
+          "home decor and interior design ideas",
+          "gardening and plant care",
+          "home repair and cleaning hacks"
+        ],
+        "hi": [
+          "डीआईवाई क्राफ़्ट और हस्तनिर्मित प्रोजेक्ट",
+          "घर की सजावट और इंटीरियर डिज़ाइन के आइडिया",
+          "बागवानी और पौधों की देखभाल",
+          "घर की मरम्मत और सफ़ाई के जुगाड़"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "slug": "art_photography",
+      "label": "Art, design and photography",
+      "taxonomy_version": "v1",
+      "descriptions": {
+        "en": [
+          "drawing, painting and digital art",
+          "photography tips and photo editing",
+          "graphic design and animation",
+          "calligraphy and creative art process"
+        ],
+        "hi": [
+          "चित्रकारी, पेंटिंग और डिजिटल आर्ट",
+          "फ़ोटोग्राफ़ी टिप्स और फ़ोटो एडिटिंग",
+          "ग्राफ़िक डिज़ाइन और एनिमेशन",
+          "सुलेख और रचनात्मक कला की प्रक्रिया"
+        ]
+      }
+    }
+  ]
+}

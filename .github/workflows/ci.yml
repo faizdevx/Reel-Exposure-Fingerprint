@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_PASSWORD: ci-only
+          POSTGRES_DB: ref_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d ref_test"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql+psycopg://postgres:ci-only@127.0.0.1:5432/ref_test
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install 3.12
+      - run: uv sync --frozen
+      - run: uv run ruff check . ../tests
+      - run: uv run ruff format --check . ../tests
+      - run: uv run mypy
+      - run: uv run pytest
+
+  extension:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: extension
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: extension/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+  dashboard:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dashboard
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: dashboard/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e
+
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate compose file
+        run: POSTGRES_PASSWORD=ci-only docker compose config --quiet
+      - name: Validate the hosted (TLS) override
+        run: >-
+          POSTGRES_PASSWORD=ci-only REF_DOMAIN=ref.example.org
+          docker compose -f docker-compose.yml -f docker-compose.hosted.yml config --quiet
+      - name: The hosted override needs a domain
+        run: |
+          if POSTGRES_PASSWORD=ci-only docker compose -f docker-compose.yml -f docker-compose.hosted.yml config --quiet; then
+            echo "hosted mode started without REF_DOMAIN"; exit 1
+          fi
+      - name: nginx configuration is valid
+        run: >-
+          docker run --rm --add-host api:127.0.0.1
+          -v "$PWD/dashboard/nginx.conf:/etc/nginx/conf.d/default.conf:ro"
+          nginx:1.27-alpine nginx -t

@@ -1,0 +1,1501 @@
+{
+ "startedAt": "2026-10-08T16:03:18.162450+00:00",
+ "frameSource": "synthetic",
+ "nFrames": 30,
+ "countsAsBenchmark": false,
+ "note": "DRY RUN: needs source=real and at least 50 frames to count",
+ "threads": 4,
+ "machine": {
+  "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+  "logicalCpus": 12,
+  "ramGB": 15.7,
+  "python": "3.12.11"
+ },
+ "results": [
+  {
+   "engine": "rapidocr_default",
+   "loadMs": 3443.9,
+   "latencyMs": {
+    "n": 30,
+    "mean": 544.2,
+    "p50": 541.9,
+    "p95": 617.6,
+    "max": 626.6
+   },
+   "cpu": {
+    "cpuSecondsPerWallSecond": 4.68,
+    "threadsConfigured": 4
+   },
+   "memory": {
+    "rssMB": 230,
+    "peakMB": 402
+   },
+   "failedFrames": 0,
+   "byThreshold": {
+    "0.0": {
+     "medianCer": 0.516,
+     "recovered": 14,
+     "of": 30,
+     "meanKeptChars": 11.7,
+     "falseTextFrames": 0
+    },
+    "0.5": {
+     "medianCer": 0.516,
+     "recovered": 14,
+     "of": 30,
+     "meanKeptChars": 11.7,
+     "falseTextFrames": 0
+    },
+    "0.6": {
+     "medianCer": 0.516,
+     "recovered": 14,
+     "of": 30,
+     "meanKeptChars": 11.5,
+     "falseTextFrames": 0
+    },
+    "0.7": {
+     "medianCer": 0.548,
+     "recovered": 14,
+     "of": 30,
+     "meanKeptChars": 11.2,
+     "falseTextFrames": 0
+    },
+    "0.8": {
+     "medianCer": 0.548,
+     "recovered": 14,
+     "of": 30,
+     "meanKeptChars": 10.9,
+     "falseTextFrames": 0
+    },
+    "0.9": {
+     "medianCer": 0.548,
+     "recovered": 14,
+     "of": 30,
+     "meanKeptChars": 10.9,
+     "falseTextFrames": 0
+    }
+   },
+   "byLang": {
+    "en": {
+     "n": 14,
+     "medianCer": 0.0,
+     "recovered": 14,
+     "noOutput": 0,
+     "meanLineScore": 0.996
+    },
+    "hi": {
+     "n": 14,
+     "medianCer": 1.0,
+     "recovered": 0,
+     "noOutput": 6,
+     "meanLineScore": 0.787
+    },
+    "mixed": {
+     "n": 2,
+     "medianCer": 0.516,
+     "recovered": 0,
+     "noOutput": 0,
+     "meanLineScore": 0.857
+    }
+   },
+   "framesWithoutText": 0,
+   "rows": [
+    {
+     "file": "photo_0139_en.jpg",
+     "lang": "en",
+     "text": "Wait for the end",
+     "lines": [
+      [
+       "Wait for the end",
+       0.985
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0139_hi.jpg",
+     "lang": "hi",
+     "text": "अंत तक देखें",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "photo_0285_en.jpg",
+     "lang": "en",
+     "text": "Day 1 vs Day 30",
+     "lines": [
+      [
+       "Day 1 vs Day 30",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0285_hi.jpg",
+     "lang": "hi",
+     "text": "पहला दिन बनाम तीसवां दिन",
+     "lines": [
+      [
+       "上",
+       0.734
+      ],
+      [
+       "上",
+       0.713
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0632_en.jpg",
+     "lang": "en",
+     "text": "Rate this 1-10",
+     "lines": [
+      [
+       "Rate this 1-10",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0632_hi.jpg",
+     "lang": "hi",
+     "text": "इसे 1 से 10 रेटिंग दें",
+     "lines": [
+      [
+       "1A10",
+       0.666
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0724_en.jpg",
+     "lang": "en",
+     "text": "Best place to visit",
+     "lines": [
+      [
+       "Best place to visit",
+       1.0
+      ],
+      [
+       "STOP",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0724_hi.jpg",
+     "lang": "hi",
+     "text": "घूमने की सबसे अच्छी जगह",
+     "lines": [
+      [
+       "STOP",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0776_en.jpg",
+     "lang": "en",
+     "text": "Don't skip this",
+     "lines": [
+      [
+       "Don't skip this",
+       0.984
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0776_hi.jpg",
+     "lang": "hi",
+     "text": "इसे स्किप मत करना",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "photo_0785_en.jpg",
+     "lang": "en",
+     "text": "My morning routine",
+     "lines": [
+      [
+       "My morning routine",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0785_hi.jpg",
+     "lang": "hi",
+     "text": "मेरी सुबह की दिनचर्या",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "photo_0872_en.jpg",
+     "lang": "en",
+     "text": "Try this trick",
+     "lines": [
+      [
+       "Try this trick",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0872_hi.jpg",
+     "lang": "hi",
+     "text": "यह तरीका आज़माएं",
+     "lines": [
+      [
+       "TRT TG",
+       0.537
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0885_en.jpg",
+     "lang": "en",
+     "text": "Part 2 in comments",
+     "lines": [
+      [
+       "Part 2 in comments",
+       1.0
+      ],
+      [
+       "Morgan",
+       0.996
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0885_hi.jpg",
+     "lang": "hi",
+     "text": "भाग 2 कमेंट में",
+     "lines": [
+      [
+       "Morgan",
+       0.999
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1000_en.jpg",
+     "lang": "en",
+     "text": "Nobody talks about this",
+     "lines": [
+      [
+       "Nobody talks about this",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1000_hi.jpg",
+     "lang": "hi",
+     "text": "इसके बारे में कोई बात नहीं करता",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "photo_1268_en.jpg",
+     "lang": "en",
+     "text": "Watch till end",
+     "lines": [
+      [
+       "Watch till end",
+       0.999
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1268_hi.jpg",
+     "lang": "hi",
+     "text": "आखिर तक देखो",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "photo_1296_en.jpg",
+     "lang": "en",
+     "text": "Save for later",
+     "lines": [
+      [
+       "Save for later",
+       1.0
+      ],
+      [
+       "HELLO",
+       0.938
+      ],
+      [
+       "KITTY",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1296_hi.jpg",
+     "lang": "hi",
+     "text": "बाद के लिए सेव करें",
+     "lines": [
+      [
+       "HELLO",
+       0.938
+      ],
+      [
+       "KITTY",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_9769_en.jpg",
+     "lang": "en",
+     "text": "Weekend vibes",
+     "lines": [
+      [
+       "Weekend vibes",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_9769_hi.jpg",
+     "lang": "hi",
+     "text": "वीकेंड का मज़ा",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "card_0_en.jpg",
+     "lang": "en",
+     "text": "5 habits that changed my life",
+     "lines": [
+      [
+       "5 habits that changed",
+       1.0
+      ],
+      [
+       "my life",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_1_hi.jpg",
+     "lang": "hi",
+     "text": "सफलता के 5 नियम",
+     "lines": [
+      [
+       "Hh5 AH",
+       0.774
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_2_mixed.jpg",
+     "lang": "mixed",
+     "text": "Paisa bachane ke 3 tarike / पैसे बचाने के तरीके",
+     "lines": [
+      [
+       "Paisa bachane ke 3",
+       0.999
+      ],
+      [
+       "ta",
+       0.611
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_3_en.jpg",
+     "lang": "en",
+     "text": "Python tip: use enumerate()",
+     "lines": [
+      [
+       "Python tip: use",
+       0.998
+      ],
+      [
+       "enumerate()",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_4_hi.jpg",
+     "lang": "hi",
+     "text": "आज का सुविचार: मेहनत ही सफलता की कुंजी है",
+     "lines": [
+      [
+       "P",
+       0.63
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_5_mixed.jpg",
+     "lang": "mixed",
+     "text": "Exam tips / परीक्षा टिप्स",
+     "lines": [
+      [
+       "Exam tips / &π f",
+       0.91
+      ]
+     ],
+     "failed": null
+    }
+   ]
+  },
+  {
+   "engine": "rapidocr_devanagari",
+   "loadMs": 1316.1,
+   "latencyMs": {
+    "n": 30,
+    "mean": 513.0,
+    "p50": 520.3,
+    "p95": 573.0,
+    "max": 600.7
+   },
+   "cpu": {
+    "cpuSecondsPerWallSecond": 4.93,
+    "threadsConfigured": 4
+   },
+   "memory": {
+    "rssMB": 215,
+    "peakMB": 390
+   },
+   "failedFrames": 0,
+   "byThreshold": {
+    "0.0": {
+     "medianCer": 0.0,
+     "recovered": 20,
+     "of": 30,
+     "meanKeptChars": 16.0,
+     "falseTextFrames": 0
+    },
+    "0.5": {
+     "medianCer": 0.0,
+     "recovered": 20,
+     "of": 30,
+     "meanKeptChars": 16.0,
+     "falseTextFrames": 0
+    },
+    "0.6": {
+     "medianCer": 0.0,
+     "recovered": 20,
+     "of": 30,
+     "meanKeptChars": 15.9,
+     "falseTextFrames": 0
+    },
+    "0.7": {
+     "medianCer": 0.0,
+     "recovered": 20,
+     "of": 30,
+     "meanKeptChars": 15.6,
+     "falseTextFrames": 0
+    },
+    "0.8": {
+     "medianCer": 0.0,
+     "recovered": 20,
+     "of": 30,
+     "meanKeptChars": 15.3,
+     "falseTextFrames": 0
+    },
+    "0.9": {
+     "medianCer": 0.0,
+     "recovered": 20,
+     "of": 30,
+     "meanKeptChars": 15.2,
+     "falseTextFrames": 0
+    }
+   },
+   "byLang": {
+    "en": {
+     "n": 14,
+     "medianCer": 0.0,
+     "recovered": 14,
+     "noOutput": 0,
+     "meanLineScore": 0.98
+    },
+    "hi": {
+     "n": 14,
+     "medianCer": 0.545,
+     "recovered": 5,
+     "noOutput": 3,
+     "meanLineScore": 0.914
+    },
+    "mixed": {
+     "n": 2,
+     "medianCer": 0.308,
+     "recovered": 1,
+     "noOutput": 0,
+     "meanLineScore": 0.98
+    }
+   },
+   "framesWithoutText": 0,
+   "rows": [
+    {
+     "file": "photo_0139_en.jpg",
+     "lang": "en",
+     "text": "Wait for the end",
+     "lines": [
+      [
+       "Wait for the end",
+       0.999
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0139_hi.jpg",
+     "lang": "hi",
+     "text": "अंत तक देखें",
+     "lines": [
+      [
+       "अंत तक देखें",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0285_en.jpg",
+     "lang": "en",
+     "text": "Day 1 vs Day 30",
+     "lines": [
+      [
+       "Day 1 vs Day 30",
+       0.97
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0285_hi.jpg",
+     "lang": "hi",
+     "text": "पहला दिन बनाम तीसवां दिन",
+     "lines": [
+      [
+       "D3h",
+       0.596
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0632_en.jpg",
+     "lang": "en",
+     "text": "Rate this 1-10",
+     "lines": [
+      [
+       "Rate this 1-10",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0632_hi.jpg",
+     "lang": "hi",
+     "text": "इसे 1 से 10 रेटिंग दें",
+     "lines": [
+      [
+       "इसे १ से 1० रेटिंग दें",
+       0.919
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0724_en.jpg",
+     "lang": "en",
+     "text": "Best place to visit",
+     "lines": [
+      [
+       "Best place to visit",
+       1.0
+      ],
+      [
+       "STOP",
+       0.997
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0724_hi.jpg",
+     "lang": "hi",
+     "text": "घूमने की सबसे अच्छी जगह",
+     "lines": [
+      [
+       "घूमने की सबसे अच्छी",
+       0.972
+      ],
+      [
+       "STOP)",
+       0.982
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0776_en.jpg",
+     "lang": "en",
+     "text": "Don't skip this",
+     "lines": [
+      [
+       "Don't skip this",
+       0.999
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0776_hi.jpg",
+     "lang": "hi",
+     "text": "इसे स्किप मत करना",
+     "lines": [
+      [
+       "इसे स्किप मत करना",
+       0.944
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0785_en.jpg",
+     "lang": "en",
+     "text": "My morning routine",
+     "lines": [
+      [
+       "My morning routine",
+       0.979
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0785_hi.jpg",
+     "lang": "hi",
+     "text": "मेरी सुबह की दिनचर्या",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "photo_0872_en.jpg",
+     "lang": "en",
+     "text": "Try this trick",
+     "lines": [
+      [
+       "Try this trick",
+       0.975
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0872_hi.jpg",
+     "lang": "hi",
+     "text": "यह तरीका आज़माएं",
+     "lines": [
+      [
+       "यह तरीका आज़माएं",
+       0.972
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0885_en.jpg",
+     "lang": "en",
+     "text": "Part 2 in comments",
+     "lines": [
+      [
+       "Part 2 in comments",
+       0.998
+      ],
+      [
+       "vorosn",
+       0.767
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0885_hi.jpg",
+     "lang": "hi",
+     "text": "भाग 2 कमेंट में",
+     "lines": [
+      [
+       "दशक ट lt",
+       0.679
+      ],
+      [
+       "Moroan",
+       0.913
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1000_en.jpg",
+     "lang": "en",
+     "text": "Nobody talks about this",
+     "lines": [
+      [
+       "Nobody talks about this",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1000_hi.jpg",
+     "lang": "hi",
+     "text": "इसके बारे में कोई बात नहीं करता",
+     "lines": [
+      [
+       "इसके बारे में कोई",
+       0.967
+      ],
+      [
+       "करता",
+       0.892
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1268_en.jpg",
+     "lang": "en",
+     "text": "Watch till end",
+     "lines": [
+      [
+       "Watch till end",
+       0.936
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1268_hi.jpg",
+     "lang": "hi",
+     "text": "आखिर तक देखो",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "photo_1296_en.jpg",
+     "lang": "en",
+     "text": "Save for later",
+     "lines": [
+      [
+       "Save for later",
+       0.975
+      ],
+      [
+       "HELLO",
+       0.99
+      ],
+      [
+       "KITTY",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1296_hi.jpg",
+     "lang": "hi",
+     "text": "बाद के लिए सेव करें",
+     "lines": [
+      [
+       "HELLO",
+       0.99
+      ],
+      [
+       "KITTY",
+       0.998
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_9769_en.jpg",
+     "lang": "en",
+     "text": "Weekend vibes",
+     "lines": [
+      [
+       "Weekend vibes",
+       0.994
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_9769_hi.jpg",
+     "lang": "hi",
+     "text": "वीकेंड का मज़ा",
+     "lines": [],
+     "failed": null
+    },
+    {
+     "file": "card_0_en.jpg",
+     "lang": "en",
+     "text": "5 habits that changed my life",
+     "lines": [
+      [
+       "5 habits that changed",
+       0.999
+      ],
+      [
+       "my life",
+       0.997
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_1_hi.jpg",
+     "lang": "hi",
+     "text": "सफलता के 5 नियम",
+     "lines": [
+      [
+       "सफलता के 5 नियम",
+       0.958
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_2_mixed.jpg",
+     "lang": "mixed",
+     "text": "Paisa bachane ke 3 tarike / पैसे बचाने के तरीके",
+     "lines": [
+      [
+       "Paisa bachane ke 3",
+       0.98
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_3_en.jpg",
+     "lang": "en",
+     "text": "Python tip: use enumerate()",
+     "lines": [
+      [
+       "Python tip: use",
+       0.999
+      ],
+      [
+       "enumerate()",
+       0.999
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_4_hi.jpg",
+     "lang": "hi",
+     "text": "आज का सुविचार: मेहनत ही सफलता की कुंजी है",
+     "lines": [
+      [
+       "मेहनत",
+       0.974
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_5_mixed.jpg",
+     "lang": "mixed",
+     "text": "Exam tips / परीक्षा टिप्स",
+     "lines": [
+      [
+       "Exam tips / परीक्षा टिप्स",
+       0.98
+      ]
+     ],
+     "failed": null
+    }
+   ]
+  },
+  {
+   "engine": "easyocr_hi_en",
+   "loadMs": 9764.3,
+   "latencyMs": {
+    "n": 30,
+    "mean": 3010.3,
+    "p50": 2929.1,
+    "p95": 3610.0,
+    "max": 4201.8
+   },
+   "cpu": {
+    "cpuSecondsPerWallSecond": 3.87,
+    "threadsConfigured": 4
+   },
+   "memory": {
+    "rssMB": 1064,
+    "peakMB": 1225
+   },
+   "failedFrames": 0,
+   "byThreshold": {
+    "0.0": {
+     "medianCer": 0.0,
+     "recovered": 24,
+     "of": 30,
+     "meanKeptChars": 21.5,
+     "falseTextFrames": 0
+    },
+    "0.5": {
+     "medianCer": 0.061,
+     "recovered": 16,
+     "of": 30,
+     "meanKeptChars": 16.1,
+     "falseTextFrames": 0
+    },
+    "0.6": {
+     "medianCer": 0.35,
+     "recovered": 10,
+     "of": 30,
+     "meanKeptChars": 11.9,
+     "falseTextFrames": 0
+    },
+    "0.7": {
+     "medianCer": 0.769,
+     "recovered": 7,
+     "of": 30,
+     "meanKeptChars": 9.3,
+     "falseTextFrames": 0
+    },
+    "0.8": {
+     "medianCer": 1.0,
+     "recovered": 3,
+     "of": 30,
+     "meanKeptChars": 5.2,
+     "falseTextFrames": 0
+    },
+    "0.9": {
+     "medianCer": 1.0,
+     "recovered": 2,
+     "of": 30,
+     "meanKeptChars": 3,
+     "falseTextFrames": 0
+    }
+   },
+   "byLang": {
+    "en": {
+     "n": 14,
+     "medianCer": 0.0,
+     "recovered": 9,
+     "noOutput": 0,
+     "meanLineScore": 0.697
+    },
+    "hi": {
+     "n": 14,
+     "medianCer": 0.0,
+     "recovered": 13,
+     "noOutput": 0,
+     "meanLineScore": 0.575
+    },
+    "mixed": {
+     "n": 2,
+     "medianCer": 0.061,
+     "recovered": 2,
+     "noOutput": 0,
+     "meanLineScore": 0.793
+    }
+   },
+   "framesWithoutText": 0,
+   "rows": [
+    {
+     "file": "photo_0139_en.jpg",
+     "lang": "en",
+     "text": "Wait for the end",
+     "lines": [
+      [
+       "Wait for the end",
+       0.729
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0139_hi.jpg",
+     "lang": "hi",
+     "text": "अंत तक देखें",
+     "lines": [
+      [
+       "अंत तक देखें",
+       0.633
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0285_en.jpg",
+     "lang": "en",
+     "text": "Day 1 vs Day 30",
+     "lines": [
+      [
+       "१ Vs",
+       0.505
+      ],
+      [
+       "30",
+       0.991
+      ],
+      [
+       "Day",
+       0.983
+      ],
+      [
+       "Day",
+       0.968
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0285_hi.jpg",
+     "lang": "hi",
+     "text": "पहला दिन बनाम तीसवां दिन",
+     "lines": [
+      [
+       "पहला दिन बनाम तीसवां दिन",
+       0.513
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0632_en.jpg",
+     "lang": "en",
+     "text": "Rate this 1-10",
+     "lines": [
+      [
+       "Rate this 1-१०",
+       0.815
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0632_hi.jpg",
+     "lang": "hi",
+     "text": "इसे 1 से 10 रेटिंग दें",
+     "lines": [
+      [
+       "इसे 1 से १० रेटिंग दें",
+       0.446
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0724_en.jpg",
+     "lang": "en",
+     "text": "Best place to visit",
+     "lines": [
+      [
+       "Best place to visit",
+       0.986
+      ],
+      [
+       "d0L$",
+       0.699
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0724_hi.jpg",
+     "lang": "hi",
+     "text": "घूमने की सबसे अच्छी जगह",
+     "lines": [
+      [
+       "घूमने की सबसे अच्छी जगह",
+       0.582
+      ],
+      [
+       "d0L$",
+       0.931
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0776_en.jpg",
+     "lang": "en",
+     "text": "Don't skip this",
+     "lines": [
+      [
+       "Don't",
+       0.647
+      ],
+      [
+       "this",
+       0.954
+      ],
+      [
+       "skip",
+       0.993
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0776_hi.jpg",
+     "lang": "hi",
+     "text": "इसे स्किप मत करना",
+     "lines": [
+      [
+       "इसे स्किप मत करना",
+       0.715
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0785_en.jpg",
+     "lang": "en",
+     "text": "My morning routine",
+     "lines": [
+      [
+       "morning routine",
+       0.651
+      ],
+      [
+       "My",
+       0.723
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0785_hi.jpg",
+     "lang": "hi",
+     "text": "मेरी सुबह की दिनचर्या",
+     "lines": [
+      [
+       "मेरी सुबह की दिनचर्या",
+       0.54
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0872_en.jpg",
+     "lang": "en",
+     "text": "Try this trick",
+     "lines": [
+      [
+       "this trick",
+       0.803
+      ],
+      [
+       "Try",
+       1.0
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0872_hi.jpg",
+     "lang": "hi",
+     "text": "यह तरीका आज़माएं",
+     "lines": [
+      [
+       "यह तरीका आज़माएं",
+       0.647
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0885_en.jpg",
+     "lang": "en",
+     "text": "Part 2 in comments",
+     "lines": [
+      [
+       "Part 2 in comments",
+       0.47
+      ],
+      [
+       "vOrpn",
+       0.214
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_0885_hi.jpg",
+     "lang": "hi",
+     "text": "भाग 2 कमेंट में",
+     "lines": [
+      [
+       "भाग 2 कमेंट में",
+       0.708
+      ],
+      [
+       "MOTgan",
+       0.342
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1000_en.jpg",
+     "lang": "en",
+     "text": "Nobody talks about this",
+     "lines": [
+      [
+       "=%",
+       0.012
+      ],
+      [
+       "Nobody talks about this",
+       0.551
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1000_hi.jpg",
+     "lang": "hi",
+     "text": "इसके बारे में कोई बात नहीं करता",
+     "lines": [
+      [
+       "इसके बारे में कोई बात नहीं",
+       0.375
+      ],
+      [
+       "करता",
+       0.988
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1268_en.jpg",
+     "lang": "en",
+     "text": "Watch till end",
+     "lines": [
+      [
+       "Watch till end",
+       0.857
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1268_hi.jpg",
+     "lang": "hi",
+     "text": "आखिर तक देखो",
+     "lines": [
+      [
+       "आखिर तक देखो",
+       0.517
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1296_en.jpg",
+     "lang": "en",
+     "text": "Save for later",
+     "lines": [
+      [
+       "Save for later",
+       0.914
+      ],
+      [
+       "HELO",
+       0.806
+      ],
+      [
+       "KITTY",
+       0.641
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_1296_hi.jpg",
+     "lang": "hi",
+     "text": "बाद के लिए सेव करें",
+     "lines": [
+      [
+       "बाद के लिए सेव करें",
+       0.397
+      ],
+      [
+       "HEIAO",
+       0.53
+      ],
+      [
+       "KITTY",
+       0.641
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_9769_en.jpg",
+     "lang": "en",
+     "text": "Weekend vibes",
+     "lines": [
+      [
+       "Weekend vibes",
+       0.498
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "photo_9769_hi.jpg",
+     "lang": "hi",
+     "text": "वीकेंड का मज़ा",
+     "lines": [
+      [
+       "वीकेंड का मज़ा",
+       0.481
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_0_en.jpg",
+     "lang": "en",
+     "text": "5 habits that changed my life",
+     "lines": [
+      [
+       "5 habits that changed",
+       0.754
+      ],
+      [
+       "my life",
+       0.492
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_1_hi.jpg",
+     "lang": "hi",
+     "text": "सफलता के 5 नियम",
+     "lines": [
+      [
+       "सफलता के 5 नियम",
+       0.34
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_2_mixed.jpg",
+     "lang": "mixed",
+     "text": "Paisa bachane ke 3 tarike / पैसे बचाने के तरीके",
+     "lines": [
+      [
+       "Paisa bachane ke 3",
+       0.7
+      ],
+      [
+       "tarike",
+       0.64
+      ],
+      [
+       "पैसे बचाने के",
+       0.975
+      ],
+      [
+       "तरीके",
+       0.697
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_3_en.jpg",
+     "lang": "en",
+     "text": "Python tip: use enumerate()",
+     "lines": [
+      [
+       "Python tip: use",
+       0.812
+      ],
+      [
+       "enumerate(",
+       0.525
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_4_hi.jpg",
+     "lang": "hi",
+     "text": "आज का सुविचार: मेहनत ही सफलता की कुंजी है",
+     "lines": [
+      [
+       "आज का",
+       0.966
+      ],
+      [
+       "सुविचारः",
+       0.431
+      ],
+      [
+       "ही सफलता की कुंजी है",
+       0.704
+      ],
+      [
+       "मेहनत",
+       0.843
+      ]
+     ],
+     "failed": null
+    },
+    {
+     "file": "card_5_mixed.jpg",
+     "lang": "mixed",
+     "text": "Exam tips / परीक्षा टिप्स",
+     "lines": [
+      [
+       "Exam tips",
+       0.924
+      ],
+      [
+       "परीक्षा टिप्स",
+       0.742
+      ]
+     ],
+     "failed": null
+    }
+   ]
+  }
+ ]
+}

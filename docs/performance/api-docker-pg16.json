@@ -1,0 +1,460 @@
+{
+ "dashboard_api": {
+  "GET /fingerprint/current (engagement)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 58.469,
+    "mean": 19.289,
+    "min": 7.016,
+    "n": 1500,
+    "p50": 18.551,
+    "p90": 22.604,
+    "p95": 24.495,
+    "p99": 48.214
+   },
+   "response_bytes": 2938,
+   "sequential_ms": {
+    "max": 11.505,
+    "mean": 7.722,
+    "min": 6.781,
+    "n": 300,
+    "p50": 7.445,
+    "p90": 8.92,
+    "p95": 9.394,
+    "p99": 10.546
+   }
+  },
+  "GET /fingerprint/current (exposure)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 61.496,
+    "mean": 19.474,
+    "min": 7.489,
+    "n": 1500,
+    "p50": 18.682,
+    "p90": 22.762,
+    "p95": 24.43,
+    "p99": 42.904
+   },
+   "response_bytes": 2935,
+   "sequential_ms": {
+    "max": 35.305,
+    "mean": 8.001,
+    "min": 6.731,
+    "n": 300,
+    "p50": 7.608,
+    "p90": 9.372,
+    "p95": 9.746,
+    "p99": 10.602
+   }
+  },
+  "GET /fingerprint/history (day, 366)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 126.629,
+    "mean": 63.856,
+    "min": 23.741,
+    "n": 1500,
+    "p50": 60.416,
+    "p90": 86.228,
+    "p95": 96.33,
+    "p99": 110.406
+   },
+   "response_bytes": 83177,
+   "sequential_ms": {
+    "max": 72.449,
+    "mean": 18.703,
+    "min": 15.928,
+    "n": 300,
+    "p50": 17.505,
+    "p90": 21.027,
+    "p95": 23.343,
+    "p99": 40.167
+   }
+  },
+  "GET /fingerprint/history (day, 90)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 118.551,
+    "mean": 61.636,
+    "min": 25.794,
+    "n": 1500,
+    "p50": 58.243,
+    "p90": 82.585,
+    "p95": 92.735,
+    "p99": 107.581
+   },
+   "response_bytes": 75085,
+   "sequential_ms": {
+    "max": 702.424,
+    "mean": 20.309,
+    "min": 15.053,
+    "n": 300,
+    "p50": 17.438,
+    "p90": 20.627,
+    "p95": 21.766,
+    "p99": 28.938
+   }
+  },
+  "GET /fingerprint/history (session, 90)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 139.298,
+    "mean": 61.53,
+    "min": 16.855,
+    "n": 1500,
+    "p50": 58.119,
+    "p90": 79.361,
+    "p95": 92.81,
+    "p99": 107.426
+   },
+   "response_bytes": 78182,
+   "sequential_ms": {
+    "max": 65.207,
+    "mean": 16.953,
+    "min": 14.965,
+    "n": 300,
+    "p50": 16.15,
+    "p90": 17.856,
+    "p95": 18.596,
+    "p99": 48.974
+   }
+  },
+  "GET /predictions/next": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 76.664,
+    "mean": 21.131,
+    "min": 7.146,
+    "n": 1500,
+    "p50": 20.283,
+    "p90": 25.178,
+    "p95": 27.574,
+    "p99": 51.686
+   },
+   "response_bytes": 6209,
+   "sequential_ms": {
+    "max": 17.126,
+    "mean": 8.238,
+    "min": 7.032,
+    "n": 300,
+    "p50": 7.734,
+    "p90": 9.646,
+    "p95": 10.796,
+    "p99": 13.349
+   }
+  },
+  "GET /self-report": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 58.06,
+    "mean": 17.828,
+    "min": 6.721,
+    "n": 1500,
+    "p50": 17.142,
+    "p90": 21.164,
+    "p95": 22.612,
+    "p99": 38.377
+   },
+   "response_bytes": 2057,
+   "sequential_ms": {
+    "max": 10.639,
+    "mean": 7.057,
+    "min": 6.063,
+    "n": 300,
+    "p50": 6.76,
+    "p90": 8.341,
+    "p95": 8.761,
+    "p99": 9.705
+   }
+  },
+  "GET /sessions": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 177.068,
+    "mean": 89.83,
+    "min": 44.894,
+    "n": 1500,
+    "p50": 83.993,
+    "p90": 121.452,
+    "p95": 129.649,
+    "p99": 148.576
+   },
+   "response_bytes": 34001,
+   "sequential_ms": {
+    "max": 71.06,
+    "mean": 24.145,
+    "min": 19.549,
+    "n": 300,
+    "p50": 21.874,
+    "p90": 28.054,
+    "p95": 31.297,
+    "p99": 60.771
+   }
+  },
+  "GET /topics/{id}/evidence (engagement)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 494.009,
+    "mean": 309.495,
+    "min": 207.366,
+    "n": 1500,
+    "p50": 322.445,
+    "p90": 373.426,
+    "p95": 389.763,
+    "p99": 428.001
+   },
+   "response_bytes": 55389,
+   "sequential_ms": {
+    "max": 233.772,
+    "mean": 155.395,
+    "min": 145.924,
+    "n": 300,
+    "p50": 153.739,
+    "p90": 163.08,
+    "p95": 167.312,
+    "p99": 179.4
+   }
+  },
+  "GET /topics/{id}/evidence (first page)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 451.941,
+    "mean": 269.028,
+    "min": 189.656,
+    "n": 1500,
+    "p50": 269.098,
+    "p90": 309.442,
+    "p95": 322.29,
+    "p99": 363.861
+   },
+   "response_bytes": 11425,
+   "sequential_ms": {
+    "max": 184.669,
+    "mean": 133.519,
+    "min": 121.475,
+    "n": 300,
+    "p50": 131.771,
+    "p90": 142.186,
+    "p95": 146.848,
+    "p99": 161.767
+   }
+  },
+  "GET /topics/{id}/evidence (offset 5000)": {
+   "errors": 0,
+   "five_users_at_once_ms": {
+    "max": 531.933,
+    "mean": 278.831,
+    "min": 201.273,
+    "n": 1500,
+    "p50": 278.331,
+    "p90": 323.821,
+    "p95": 345.428,
+    "p99": 390.1
+   },
+   "response_bytes": 11515,
+   "sequential_ms": {
+    "max": 190.88,
+    "mean": 138.84,
+    "min": 129.219,
+    "n": 300,
+    "p50": 137.22,
+    "p90": 147.091,
+    "p95": 150.922,
+    "p99": 164.891
+   }
+  },
+  "_server_rss_mb": 108.2
+ },
+ "environment": {
+  "client_cpu_ids": [
+   1,
+   3,
+   5,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "env": {},
+  "gpu": false,
+  "logical_cpus": 12,
+  "measured_at": "2026-10-10T07:22:45+00:00",
+  "memory_gb": 15.7,
+  "packages": {
+   "fastapi": "0.142.2",
+   "numpy": "2.5.3",
+   "onnxruntime": "1.31.0",
+   "pillow": "12.3.0",
+   "psutil": "7.2.2",
+   "psycopg": "3.3.6",
+   "rapidocr": "3.9.2",
+   "sqlalchemy": "2.1.3",
+   "torch": "2.14.1+cpu",
+   "transformers": "5.19.0",
+   "uvicorn": "0.54.0"
+  },
+  "physical_cores": 6,
+  "pinned_cpus": 4,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.11",
+  "server_cpu_ids": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "threads": 4
+ },
+ "event_upload": {
+  "POST /events, batch of 1": {
+   "body_bytes": 629,
+   "ms": {
+    "max": 16.014,
+    "mean": 13.788,
+    "min": 12.005,
+    "n": 60,
+    "p50": 13.496,
+    "p90": 15.391,
+    "p95": 15.69,
+    "p99": 15.958
+   }
+  },
+  "POST /events, batch of 10": {
+   "body_bytes": 6297,
+   "ms": {
+    "max": 52.042,
+    "mean": 36.038,
+    "min": 30.898,
+    "n": 60,
+    "p50": 34.943,
+    "p90": 42.746,
+    "p95": 46.356,
+    "p99": 51.213
+   }
+  },
+  "POST /events, batch of 50": {
+   "body_bytes": 31633,
+   "ms": {
+    "max": 296.493,
+    "mean": 131.133,
+    "min": 116.297,
+    "n": 60,
+    "p50": 126.533,
+    "p90": 138.238,
+    "p95": 141.508,
+    "p99": 215.085
+   }
+  },
+  "POST /events, replay of 50 stored events": {
+   "ms": {
+    "max": 276.82,
+    "mean": 122.835,
+    "min": 99.725,
+    "n": 60,
+    "p50": 115.165,
+    "p90": 145.97,
+    "p95": 158.577,
+    "p99": 218.71
+   }
+  },
+  "POST /events/{id}/frames, 5 frames": {
+   "jpeg_bytes": 452416,
+   "ms": {
+    "max": 44.915,
+    "mean": 28.793,
+    "min": 20.676,
+    "n": 60,
+    "p50": 28.02,
+    "p90": 36.456,
+    "p95": 38.045,
+    "p99": 43.646
+   }
+  },
+  "_server_rss_mb": 103.3
+ },
+ "seed": 0,
+ "seeded_database": {
+  "exposures": 100000,
+  "insert_seconds": 61.4,
+  "rebuild": {
+   "user0": {
+    "fingerprint_rebuild_s": 2.95,
+    "prediction_rebuild_s": 17.69,
+    "prediction_rows": 100000,
+    "snapshots": 600
+   },
+   "user1": {
+    "fingerprint_rebuild_s": 2.98,
+    "prediction_rebuild_s": 16.37,
+    "prediction_rows": 100000,
+    "snapshots": 600
+   },
+   "user2": {
+    "fingerprint_rebuild_s": 2.97,
+    "prediction_rebuild_s": 16.83,
+    "prediction_rows": 100000,
+    "snapshots": 600
+   },
+   "user3": {
+    "fingerprint_rebuild_s": 3.28,
+    "prediction_rebuild_s": 15.67,
+    "prediction_rows": 100000,
+    "snapshots": 600
+   },
+   "user4": {
+    "fingerprint_rebuild_s": 3.05,
+    "prediction_rebuild_s": 15.24,
+    "prediction_rows": 100000,
+    "snapshots": 600
+   }
+  },
+  "sessions_per_user": 200,
+  "tables": {
+   "fingerprint_snapshots": {
+    "rows": 3000,
+    "total_mb": 6.2
+   },
+   "prediction_state": {
+    "rows": 5,
+    "total_mb": 0.1
+   },
+   "predictions": {
+    "rows": 500000,
+    "total_mb": 448.0
+   },
+   "reel_exposures": {
+    "rows": 100000,
+    "total_mb": 37.1
+   },
+   "sessions": {
+    "rows": 1000,
+    "total_mb": 0.2
+   },
+   "topic_assignments": {
+    "rows": 2800110,
+    "total_mb": 431.2
+   },
+   "topic_transitions": {
+    "rows": 848,
+    "total_mb": 0.1
+   },
+   "users": {
+    "rows": 5,
+    "total_mb": 0.0
+   }
+  },
+  "topics": 28,
+  "user_ids": [
+   "00000010-0000-0000-0000-000000000000",
+   "00000010-0000-0000-0000-000000000001",
+   "00000010-0000-0000-0000-000000000002",
+   "00000010-0000-0000-0000-000000000003",
+   "00000010-0000-0000-0000-000000000004"
+  ],
+  "users": 5
+ },
+ "suite": "api"
+}

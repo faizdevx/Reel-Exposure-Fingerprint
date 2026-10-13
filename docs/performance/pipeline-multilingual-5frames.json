@@ -1,0 +1,228 @@
+{
+ "environment": {
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "env": {},
+  "gpu": false,
+  "logical_cpus": 12,
+  "measured_at": "2026-10-10T07:12:56+00:00",
+  "memory_gb": 15.7,
+  "packages": {
+   "fastapi": "0.142.2",
+   "numpy": "2.5.3",
+   "onnxruntime": "1.31.0",
+   "pillow": "12.3.0",
+   "psutil": "7.2.2",
+   "psycopg": "3.3.6",
+   "rapidocr": "3.9.2",
+   "sqlalchemy": "2.1.3",
+   "torch": "2.14.1+cpu",
+   "transformers": "5.19.0",
+   "uvicorn": "0.54.0"
+  },
+  "physical_cores": 6,
+  "pinned_cpu_ids": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "pinned_cpus": 4,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.11",
+  "threads": 4
+ },
+ "result": {
+  "cpu_ids_per_worker": [
+   [
+    0,
+    2,
+    4,
+    6
+   ]
+  ],
+  "failed_stages": [],
+  "fingerprint_rebuild_seconds": 0.053,
+  "frames_per_reel": 5,
+  "load_and_warmup_ms_per_worker": [
+   72364.0
+  ],
+  "ocr": "devanagari",
+  "ocr_frames_per_reel": 2,
+  "peak_rss_mb_per_worker": [
+   2459.5
+  ],
+  "per_reel_ocr_ms": {
+   "max": 1487.749,
+   "mean": 1241.409,
+   "min": 1007.722,
+   "n": 200,
+   "p50": 1243.719,
+   "p90": 1345.232,
+   "p95": 1375.026,
+   "p99": 1467.467
+  },
+  "per_reel_process_ms": {
+   "max": 1502.863,
+   "mean": 1209.212,
+   "min": 1129.458,
+   "n": 200,
+   "p50": 1193.175,
+   "p90": 1279.272,
+   "p95": 1321.224,
+   "p99": 1408.645
+  },
+  "per_reel_total_ms": {
+   "max": 2970.302,
+   "mean": 2450.621,
+   "min": 2201.744,
+   "n": 200,
+   "p50": 2441.406,
+   "p90": 2584.631,
+   "p95": 2638.234,
+   "p99": 2762.297
+  },
+  "prediction_rebuild_seconds": 0.133,
+  "reels": 200,
+  "reels_per_second": 0.408,
+  "seconds_per_reel_wall": 2.451,
+  "stage_ms": {
+   "assign_other": {
+    "max": 15.0,
+    "mean": 0.075,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "cache_lookup": {
+    "max": 47.0,
+    "mean": 7.07,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 16.0,
+    "p95": 16.0,
+    "p99": 16.0
+   },
+   "embed_frames": {
+    "max": 1313.0,
+    "mean": 1090.77,
+    "min": 1016.0,
+    "n": 200,
+    "p50": 1078.0,
+    "p90": 1141.0,
+    "p95": 1187.05,
+    "p99": 1266.0
+   },
+   "embed_text": {
+    "max": 203.0,
+    "mean": 85.085,
+    "min": 47.0,
+    "n": 200,
+    "p50": 78.0,
+    "p90": 109.0,
+    "p95": 125.0,
+    "p99": 172.0
+   },
+   "fuse": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "load_taxonomy_embeddings": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "load_visual_taxonomy_embeddings": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "normalize": {
+    "max": 16.0,
+    "mean": 0.54,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 16.0
+   },
+   "pool_frames": {
+    "max": 16.0,
+    "mean": 0.16,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.16
+   },
+   "score_topics": {
+    "max": 16.0,
+    "mean": 0.08,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "score_visual": {
+    "max": 16.0,
+    "mean": 0.23,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 15.0
+   },
+   "store_assignments": {
+    "max": 32.0,
+    "mean": 13.88,
+    "min": 0.0,
+    "n": 200,
+    "p50": 16.0,
+    "p90": 16.0,
+    "p95": 16.0,
+    "p99": 31.01
+   },
+   "store_features": {
+    "max": 31.0,
+    "mean": 10.905,
+    "min": 0.0,
+    "n": 200,
+    "p50": 15.0,
+    "p90": 16.0,
+    "p95": 16.0,
+    "p99": 16.15
+   }
+  },
+  "threads_per_worker": 4,
+  "total_with_post_seconds": 490.34,
+  "visual_model": "siglip-multilingual",
+  "wall_seconds_for_all_reels": 490.16,
+  "workers": 1
+ },
+ "seed": 0,
+ "suite": "pipeline"
+}

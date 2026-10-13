@@ -1,0 +1,229 @@
+{
+ "environment": {
+  "cpu": "11th Gen Intel(R) Core(TM) i5-11260H @ 2.60GHz",
+  "env": {},
+  "gpu": false,
+  "logical_cpus": 12,
+  "measured_at": "2026-10-10T08:03:23+00:00",
+  "memory_gb": 15.7,
+  "packages": {
+   "fastapi": "0.142.2",
+   "numpy": "2.5.3",
+   "onnxruntime": "1.31.0",
+   "pillow": "12.3.0",
+   "psutil": "7.2.2",
+   "psycopg": "3.3.6",
+   "rapidocr": "3.9.2",
+   "sqlalchemy": "2.1.3",
+   "torch": "2.14.1+cpu",
+   "transformers": "5.19.0",
+   "uvicorn": "0.54.0"
+  },
+  "physical_cores": 6,
+  "pinned_cpu_ids": [
+   0,
+   2,
+   4,
+   6
+  ],
+  "pinned_cpus": 4,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.11",
+  "threads": 4
+ },
+ "result": {
+  "cpu_ids_per_worker": [
+   [
+    0,
+    2,
+    4,
+    6
+   ]
+  ],
+  "failed_stages": [],
+  "fingerprint_rebuild_seconds": 0.056,
+  "frames_per_reel": 5,
+  "load_and_warmup_ms_per_worker": [
+   62763.0
+  ],
+  "ocr": "devanagari",
+  "ocr_frames_per_reel": 2,
+  "ort_spinning": false,
+  "peak_rss_mb_per_worker": [
+   2060.1
+  ],
+  "per_reel_ocr_ms": {
+   "max": 1201.981,
+   "mean": 908.074,
+   "min": 783.161,
+   "n": 200,
+   "p50": 903.266,
+   "p90": 980.904,
+   "p95": 1044.052,
+   "p99": 1099.368
+  },
+  "per_reel_process_ms": {
+   "max": 1285.251,
+   "mean": 925.994,
+   "min": 849.816,
+   "n": 200,
+   "p50": 906.646,
+   "p90": 1000.325,
+   "p95": 1046.005,
+   "p99": 1181.798
+  },
+  "per_reel_total_ms": {
+   "max": 2428.446,
+   "mean": 1834.068,
+   "min": 1678.467,
+   "n": 200,
+   "p50": 1812.337,
+   "p90": 1940.624,
+   "p95": 2029.965,
+   "p99": 2231.13
+  },
+  "prediction_rebuild_seconds": 0.179,
+  "reels": 200,
+  "reels_per_second": 0.5451,
+  "seconds_per_reel_wall": 1.835,
+  "stage_ms": {
+   "assign_other": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "cache_lookup": {
+    "max": 16.0,
+    "mean": 6.615,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 16.0,
+    "p95": 16.0,
+    "p99": 16.0
+   },
+   "embed_frames": {
+    "max": 1219.0,
+    "mean": 873.785,
+    "min": 797.0,
+    "n": 200,
+    "p50": 859.0,
+    "p90": 937.0,
+    "p95": 984.0,
+    "p99": 1110.78
+   },
+   "embed_text": {
+    "max": 125.0,
+    "mean": 19.215,
+    "min": 0.0,
+    "n": 200,
+    "p50": 16.0,
+    "p90": 31.0,
+    "p95": 32.0,
+    "p99": 47.0
+   },
+   "fuse": {
+    "max": 16.0,
+    "mean": 0.08,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "load_taxonomy_embeddings": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "load_visual_taxonomy_embeddings": {
+    "max": 0.0,
+    "mean": 0.0,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "normalize": {
+    "max": 16.0,
+    "mean": 0.48,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 16.0
+   },
+   "pool_frames": {
+    "max": 16.0,
+    "mean": 0.08,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+   },
+   "score_topics": {
+    "max": 15.0,
+    "mean": 0.15,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.15
+   },
+   "score_visual": {
+    "max": 16.0,
+    "mean": 0.155,
+    "min": 0.0,
+    "n": 200,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.15
+   },
+   "store_assignments": {
+    "max": 47.0,
+    "mean": 13.805,
+    "min": 0.0,
+    "n": 200,
+    "p50": 16.0,
+    "p90": 16.0,
+    "p95": 16.0,
+    "p99": 32.14
+   },
+   "store_features": {
+    "max": 31.0,
+    "mean": 10.63,
+    "min": 0.0,
+    "n": 200,
+    "p50": 15.0,
+    "p90": 16.0,
+    "p95": 16.0,
+    "p99": 16.15
+   }
+  },
+  "threads_per_worker": 4,
+  "total_with_post_seconds": 367.15,
+  "visual_model": "siglip2-base",
+  "wall_seconds_for_all_reels": 366.91,
+  "workers": 1
+ },
+ "seed": 0,
+ "suite": "pipeline"
+}

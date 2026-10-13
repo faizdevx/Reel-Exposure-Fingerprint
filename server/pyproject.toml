@@ -1,0 +1,92 @@
+[project]
+name = "ref-server"
+version = "0.1.0"
+description = "Reel Exposure Fingerprint backend (M1 skeleton)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "sqlalchemy>=2.0.36",
+    "alembic>=1.14",
+    "psycopg[binary]>=3.2",
+    "pgvector>=0.3",
+    "argon2-cffi>=25.1.0",
+    "numpy>=2.0",
+    "python-multipart>=0.0.32",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "httpx>=0.28",
+    "ruff>=0.8",
+    "mypy>=1.13",
+    "httpx2>=2.13.1",
+]
+# Text embedding model runtime (spec §6). Not installed by default: API, CI and the API image do not
+# need it. The worker environment installs it with `uv sync --group ml`. torch comes from the CPU
+# index so Linux does not pull the CUDA build (spec N3: CPU only, no GPU).
+ml = [
+    "pillow>=12.3.0",
+    "protobuf>=7.36.2",
+    "sentencepiece>=0.2.2",
+    "torch>=2.5",
+    "transformers>=4.46",
+]
+
+# Performance benchmark only (`python -m app.bench`, docs/performance-report.md): the OCR engine the
+# M0 spike measured, and process statistics. Not part of the API, CI or the worker image yet; the OCR
+# stage itself is not built (docs/ocr-evaluation.md).
+bench = [
+    "rapidocr==3.9.2",
+    "onnxruntime>=1.20",
+    "psutil>=6.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pytest.ini_options]
+# Tests live in the repo-level tests/ directory; run pytest from server/.
+testpaths = ["../tests"]
+pythonpath = ["."]
+addopts = "-ra"
+markers = [
+    "db: needs a PostgreSQL + pgvector database (set TEST_DATABASE_URL)",
+    "model: loads the real e5 model (needs `uv sync --group ml` and the model files; REF_TEST_MODEL=1)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "S", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests: asserts; fake passwords and seeded non-cryptographic random data; SQL literals that name
+# test tables; deliberate look-alike Unicode in the text-normalisation fixtures; long string literals.
+# The benchmark tool: asserts, a fake password hash for seeded users, and long report strings.
+"app/bench/**" = ["E501", "S101", "S105", "S106"]
+"../tests/**" = ["S101", "S105", "S106", "S311", "S608", "RUF001", "RUF002", "RUF003", "E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+files = ["app", "migrations", "../tests"]
+# pgvector ships no complete type stubs for its SQLAlchemy integration.
+[[tool.mypy.overrides]]
+module = ["pgvector.*", "torch.*", "transformers.*", "psutil.*", "rapidocr.*"]
+ignore_missing_imports = true

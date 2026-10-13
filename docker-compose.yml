@@ -1,0 +1,73 @@
+# Stack: database, API, worker (text pipeline, fingerprints), dashboard.
+# All published ports bind to 127.0.0.1 (local single-user mode, spec §7).
+# Secrets come from the environment / .env (see .env.example), never from this file.
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ref
+      POSTGRES_DB: ref
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ref -d ref"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  api:
+    build: ./server
+    environment:
+      REF_DATABASE_URL: postgresql+psycopg://ref:${POSTGRES_PASSWORD}@db:5432/ref
+      REF_ENVIRONMENT: ${REF_ENVIRONMENT:-local}
+      REF_LOG_LEVEL: ${REF_LOG_LEVEL:-INFO}
+      REF_FRAME_STORE_DIR: /var/lib/ref/frames
+      # The dashboard's nginx is the only proxy; its X-Forwarded-For is believed from the compose
+      # network only (private ranges), so the rate limits see the real client address.
+      REF_TRUSTED_PROXIES: ${REF_TRUSTED_PROXIES:-172.16.0.0/12,10.0.0.0/8,192.168.0.0/16}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - frames:/var/lib/ref/frames
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: server/Dockerfile.worker
+    environment:
+      REF_DATABASE_URL: postgresql+psycopg://ref:${POSTGRES_PASSWORD}@db:5432/ref
+      REF_ENVIRONMENT: ${REF_ENVIRONMENT:-local}
+      REF_LOG_LEVEL: ${REF_LOG_LEVEL:-INFO}
+      REF_MODEL_CACHE_DIR: /var/lib/ref/models
+      # The service user has no home directory; Hugging Face (and its xet cache) writes here.
+      HF_HOME: /var/lib/ref/models/hf
+      REF_EMBEDDING_CACHE_DIR: /var/lib/ref/embeddings
+      REF_FRAME_STORE_DIR: /var/lib/ref/frames
+    depends_on:
+      api:
+        condition: service_started
+    volumes:
+      - models:/var/lib/ref/models
+      - embeddings:/var/lib/ref/embeddings
+      - frames:/var/lib/ref/frames
+    restart: unless-stopped
+
+  dashboard:
+    build: ./dashboard
+    depends_on:
+      - api
+    ports:
+      - "127.0.0.1:8080:80"
+    restart: unless-stopped
+
+volumes:
+  db-data:
+  frames:
+  models:
+  embeddings:
