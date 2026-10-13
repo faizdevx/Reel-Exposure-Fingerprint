@@ -10,8 +10,8 @@ The file lists scorable topics only. The catch-all `other` of spec §5.2 is assi
 not by descriptions, so it is not in the file and its slug is reserved here.
 
 Every change to the file needs a new `taxonomy_version`: the version is part of the pipeline
-version (CONTRIBUTING.md, reproducibility rules). `taxonomy_hash` gives a content hash that tests pin to
-the version, so wording cannot change silently.
+version (CONTRIBUTING.md, reproducibility rules). `taxonomy_hash` gives a content hash that
+tests pin to the version, so wording cannot change silently.
 """
 
 import hashlib

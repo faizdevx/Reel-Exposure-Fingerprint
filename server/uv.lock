@@ -951,6 +951,7 @@ dev = [
     { name = "httpx" },
     { name = "httpx2" },
     { name = "mypy" },
+    { name = "pillow" },
     { name = "pytest" },
     { name = "ruff" },
 ]
@@ -988,6 +989,7 @@ dev = [
     { name = "httpx", specifier = ">=0.28" },
     { name = "httpx2", specifier = ">=2.13.1" },
     { name = "mypy", specifier = ">=1.13" },
+    { name = "pillow", specifier = ">=12.3.0" },
     { name = "pytest", specifier = ">=8.3" },
     { name = "ruff", specifier = ">=0.8" },
 ]

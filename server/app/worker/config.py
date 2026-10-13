@@ -1,4 +1,4 @@
-"""Text pipeline configuration and `pipeline_version` (spec N9, CONTRIBUTING.md reproducibility rules).
+"""Text pipeline configuration and `pipeline_version` (spec N9, CONTRIBUTING.md rules).
 
 `pipeline_version` is a short hash of the canonical configuration: the text model with its pinned
 Hugging Face revision and every setting that changes its output, the normaliser and its Unicode

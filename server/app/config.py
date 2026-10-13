@@ -1,4 +1,4 @@
-"""Application settings, read from environment variables only (CONTRIBUTING.md: no hardcoded config)."""
+"""Application settings, read from environment variables only (CONTRIBUTING.md: no hardcoding)."""
 
 from functools import lru_cache
 from pathlib import Path

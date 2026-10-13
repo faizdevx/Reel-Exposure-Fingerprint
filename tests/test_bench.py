@@ -106,13 +106,34 @@ def test_the_benchmark_refuses_a_database_that_is_not_named_bench() -> None:
 
 
 def interval(p50: float, p95: float, n: int = 50) -> dict[str, Any]:
-    return {"n": n, "min": p50 / 2, "mean": p50, "p50": p50, "p90": p95, "p95": p95, "p99": p95, "max": p95 * 1.1}
+    return {
+        "n": n,
+        "min": p50 / 2,
+        "mean": p50,
+        "p50": p50,
+        "p90": p95,
+        "p95": p95,
+        "p99": p95,
+        "max": p95 * 1.1,
+    }
 
 
 def browser(detection_p95: float, mutation_p95: float, over: int = 0) -> dict[str, Any]:
     def scenario(slowdown: int) -> dict[str, Any]:
-        det = {"from_60_percent_ms": interval(5, detection_p95), "from_scroll_command_ms": interval(20, 90), "missed": 0}
-        frames = {"frames": 500, "frame_ms": interval(16, 17), "frames_over_20ms": 4, "frames_over_33ms": 2, "frames_over_50ms": 0, "long_tasks": 1, "longest_task_ms": 60}
+        det = {
+            "from_60_percent_ms": interval(5, detection_p95),
+            "from_scroll_command_ms": interval(20, 90),
+            "missed": 0,
+        }
+        frames = {
+            "frames": 500,
+            "frame_ms": interval(16, 17),
+            "frames_over_20ms": 4,
+            "frames_over_33ms": 2,
+            "frames_over_50ms": 0,
+            "long_tasks": 1,
+            "longest_task_ms": 60,
+        }
         return {
             "cpu_slowdown": slowdown,
             "dom_elements": 46000,
@@ -121,7 +142,12 @@ def browser(detection_p95: float, mutation_p95: float, over: int = 0) -> dict[st
             "read_reel_metadata_ms": interval(3, 4),
             "intersection_callback_ms": interval(2, 4),
             "intersection_callbacks_over_5ms": over,
-            "mutation_batches": {"1_reels_added_per_batch": {"mutation_callback_ms": interval(1, mutation_p95), "over_5ms": 0}},
+            "mutation_batches": {
+                "1_reels_added_per_batch": {
+                    "mutation_callback_ms": interval(1, mutation_p95),
+                    "over_5ms": 0,
+                }
+            },
             "scroll_without_tracker": frames,
             "scroll_with_tracker": frames,
         }
@@ -140,21 +166,44 @@ def pipeline(seconds_per_reel: float, reels: int = 200) -> dict[str, Any]:
         "suite": "pipeline",
         "environment": {},
         "result": {
-            "reels": reels, "workers": 1, "threads_per_worker": 4, "visual_model": "siglip2-base",
-            "ocr": "devanagari", "frames_per_reel": 5, "ocr_frames_per_reel": 2,
-            "wall_seconds_for_all_reels": wall, "seconds_per_reel_wall": seconds_per_reel,
-            "reels_per_second": 1 / seconds_per_reel, "fingerprint_rebuild_seconds": 0.1,
-            "prediction_rebuild_seconds": 0.2, "total_with_post_seconds": wall + 0.3,
+            "reels": reels,
+            "workers": 1,
+            "threads_per_worker": 4,
+            "visual_model": "siglip2-base",
+            "ocr": "devanagari",
+            "frames_per_reel": 5,
+            "ocr_frames_per_reel": 2,
+            "wall_seconds_for_all_reels": wall,
+            "seconds_per_reel_wall": seconds_per_reel,
+            "reels_per_second": 1 / seconds_per_reel,
+            "fingerprint_rebuild_seconds": 0.1,
+            "prediction_rebuild_seconds": 0.2,
+            "total_with_post_seconds": wall + 0.3,
             "per_reel_total_ms": interval(seconds_per_reel * 1000, seconds_per_reel * 1100),
-            "per_reel_ocr_ms": interval(1200, 1300), "per_reel_process_ms": interval(900, 1000),
+            "per_reel_ocr_ms": interval(1200, 1300),
+            "per_reel_process_ms": interval(900, 1000),
             "stage_ms": {"embed_frames": interval(800, 900), "fuse": interval(0.1, 0.2)},
-            "failed_stages": [], "peak_rss_mb_per_worker": [600.0], "cpu_ids_per_worker": [None],
+            "failed_stages": [],
+            "peak_rss_mb_per_worker": [600.0],
+            "cpu_ids_per_worker": [None],
         },
     }
 
 
+def _full(d: dict[str, Any]) -> dict[str, Any]:
+    """The shape `report.collect` produces: results grouped by kind, with `browser` as an alias."""
+    full = dict(d)
+    if d.get("browser") is not None:
+        full["browsers"] = {"browser": d["browser"]}
+    return full
+
+
+def _render(d: dict[str, Any]) -> str:
+    return report.render(_full(d))
+
+
 def verdicts(d: dict[str, Any]) -> dict[str, str]:
-    return {row[0]: row[3] for row in report.summary_rows(d)}
+    return {row[0]: row[3] for row in report.summary_rows(_full(d))}
 
 
 def test_a_target_met_is_reported_met_and_a_target_missed_is_reported_missed() -> None:
@@ -175,11 +224,23 @@ def test_a_target_met_is_reported_met_and_a_target_missed_is_reported_missed() -
 
 def test_the_boundaries_are_exclusive_or_inclusive_as_the_spec_says() -> None:
     # "< 500 ms" and "< 5 ms" are strict; "at least 1 Reel per 3 s" and "within 10 minutes" are not.
-    assert verdicts({"browser": browser(500, 4), "pipelines": {}})["N1 Reel detection latency"] == "**MISSED**"
-    assert verdicts({"browser": browser(499.9, 4.99), "pipelines": {}})["N1 Reel detection latency"] == "**met**"
+    assert (
+        verdicts({"browser": browser(500, 4), "pipelines": {}})["N1 Reel detection latency"]
+        == "**MISSED**"
+    )
+    assert (
+        verdicts({"browser": browser(499.9, 4.99), "pipelines": {}})["N1 Reel detection latency"]
+        == "**met**"
+    )
     v = verdicts({"pipelines": {"edge": pipeline(3.0)}})
-    assert v["N3 worker throughput: `edge`"] == "**met**" and v["N3 200-Reel session: `edge`"] == "**met**"
-    assert verdicts({"pipelines": {"over": pipeline(3.0001)}})["N3 worker throughput: `over`"] == "**MISSED**"
+    assert (
+        v["N3 worker throughput: `edge`"] == "**met**"
+        and v["N3 200-Reel session: `edge`"] == "**met**"
+    )
+    assert (
+        verdicts({"pipelines": {"over": pipeline(3.0001)}})["N3 worker throughput: `over`"]
+        == "**MISSED**"
+    )
 
 
 def test_fewer_than_200_reels_is_never_reported_as_the_200_reel_result() -> None:
@@ -189,12 +250,14 @@ def test_fewer_than_200_reels_is_never_reported_as_the_200_reel_result() -> None
 
 def test_nothing_measured_is_not_reported_as_met() -> None:
     assert report.summary_rows({"pipelines": {}}) == []
-    text = report.render({"pipelines": {}, "analysis": None})
+    text = _render({"pipelines": {}, "analysis": None})
     assert "**met**" not in text and "Summary against the targets" in text
 
 
 def test_the_report_names_what_it_did_not_measure() -> None:
-    text = report.render({"browser": browser(10, 2), "pipelines": {"fast": pipeline(2.2)}, "analysis": None})
+    text = _render(
+        {"browser": browser(10, 2), "pipelines": {"fast": pipeline(2.2)}, "analysis": None}
+    )
     assert "Nothing here was measured on Instagram or on real Reel frames" in text
     assert "frame capture (M4) is not built" in text and "not measured" in text
     assert "The worker is composed by the benchmark" in text
@@ -208,13 +271,13 @@ def test_the_report_loads_result_files_by_suite_and_includes_the_analysis(tmp_pa
     (tmp_path / "analysis.md").write_text("## Bottlenecks\n\nOCR dominates.\n")
     loaded = report.load(tmp_path)
     assert set(loaded["pipelines"]) == {"pipeline-a", "pipeline-b"} and "browser" in loaded
-    text = report.render(loaded)
+    text = _render(loaded)
     assert "## Bottlenecks" in text and "OCR dominates." in text
     assert "`pipeline-a`" in text and "`pipeline-b`" in text
 
 
 def test_every_number_comes_from_the_files_not_from_the_code() -> None:
-    a = report.render({"browser": browser(10, 2), "pipelines": {"x": pipeline(2.0)}, "analysis": None})
-    b = report.render({"browser": browser(77, 3), "pipelines": {"x": pipeline(2.9)}, "analysis": None})
+    a = _render({"browser": browser(10, 2), "pipelines": {"x": pipeline(2.0)}, "analysis": None})
+    b = _render({"browser": browser(77, 3), "pipelines": {"x": pipeline(2.9)}, "analysis": None})
     assert a != b and "2.90 s per Reel" in b and "2.00 s per Reel" in a
     assert "p95 77.0 ms from 60% visible" in b

@@ -1,7 +1,7 @@
 """Job loop: claims `exposure` jobs, runs the Reel pipeline, rebuilds fingerprints.
 
-One process. A job is claimed with `FOR UPDATE SKIP LOCKED` (spec §5, CONTRIBUTING.md), so a second worker
-would not take the same row. The queue is the `jobs` table; there is no Redis.
+One process. A job is claimed with `FOR UPDATE SKIP LOCKED` (spec §5), so a second
+worker would not take the same row. The queue is the `jobs` table; there is no Redis.
 
 Per job:
 
@@ -9,7 +9,7 @@ Per job:
     exposure.process_status = done -> job done
 
 A failure re-queues the job with a growing delay, up to `MAX_ATTEMPTS`, then marks it `failed`.
-`jobs.last_error` holds the exception class name only: messages can quote captions (CONTRIBUTING.md).
+`jobs.last_error` holds the exception class name only: messages can quote captions.
 
 When the queue is empty and users got new assignments since the last rebuild, their fingerprints,
 snapshots and predictions are rebuilt once from stored assignments (replay, M5), not per Reel.
